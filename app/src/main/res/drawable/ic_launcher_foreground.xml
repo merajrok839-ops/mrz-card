@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:translateX="22"
+        android:translateY="26">
+        <!-- Main Credit Card Body -->
+        <path
+            android:fillColor="#064E3B"
+            android:strokeColor="#F59E0B"
+            android:strokeWidth="2.5"
+            android:pathData="M6,0 L58,0 A6,6 0 0 1 64,6 L64,44 A6,6 0 0 1 58,50 L6,50 A6,6 0 0 1 0,44 L0,6 A6,6 0 0 1 6,0 Z" />
+        
+        <!-- Magnetic / Decorative Stripe -->
+        <path
+            android:fillColor="#047857"
+            android:pathData="M0,10 L64,10 L64,18 L0,18 Z" />
+
+        <!-- Gold EMV Chip -->
+        <path
+            android:fillColor="#FBBF24"
+            android:pathData="M8,24 L20,24 A2,2 0 0 1 22,26 L22,34 A2,2 0 0 1 20,36 L8,36 A2,2 0 0 1 6,34 L6,26 A2,2 0 0 1 8,24 Z" />
+        <path
+            android:fillColor="#D97706"
+            android:pathData="M14,24 L14,36 M6,30 L22,30"
+            android:strokeWidth="0.8"
+            android:strokeColor="#B45309" />
+
+        <!-- Contactless / Smart Pay Waves -->
+        <path
+            android:pathData="M26,27 A6,6 0 0 1 26,33 M29,25 A9,9 0 0 1 29,35 M32,23 A12,12 0 0 1 32,37"
+            android:strokeColor="#34D399"
+            android:strokeWidth="1.5"
+            android:strokeLineCap="round" />
+
+        <!-- Rupee Symbol ₹ in Gold -->
+        <!-- Top bar 1 -->
+        <path
+            android:fillColor="#F59E0B"
+            android:pathData="M44,24 L56,24 L56,26.5 L44,26.5 Z" />
+        <!-- Top bar 2 -->
+        <path
+            android:fillColor="#F59E0B"
+            android:pathData="M44,28.5 L54,28.5 L54,31 L44,31 Z" />
+        <!-- Rupee Loop and Stem -->
+        <path
+            android:fillColor="#F59E0B"
+            android:pathData="M46,24 L49,24 L49,32 C53,32 54,35 54,37 C54,38 52,40 48,40 L46,40 Z" />
+        <!-- Rupee Slanted Leg -->
+        <path
+            android:pathData="M48,37 L56,46"
+            android:strokeColor="#F59E0B"
+            android:strokeWidth="2.5"
+            android:strokeLineCap="round" />
+
+        <!-- Dots representing card numbers -->
+        <path
+            android:fillColor="#A7F3D0"
+            android:pathData="M8,44 A1.2,1.2 0 1 1 8,43.9 M14,44 A1.2,1.2 0 1 1 14,43.9 M20,44 A1.2,1.2 0 1 1 20,43.9 M26,44 A1.2,1.2 0 1 1 26,43.9 M34,44 A1.2,1.2 0 1 1 34,43.9 M40,44 A1.2,1.2 0 1 1 40,43.9" />
+    </group>
+</vector>

@@ -1,0 +1,6 @@
+{
+  "name": "MRZ Card",
+  "description": "MRZ Card (एमआरजेड कार्ड) - स्मार्ट पे और डिजिटल मुनीम खाता",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
