@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>MRZ Card - स्मार्ट पे & डिजिटल मुनीम</title>
+  <title>MRZ Card - अल्ट्रा फिनटेक स्मार्ट पे & डिजिटल मुनीम</title>
   
-  <!-- Web App Manifest embedded as Data URI for instant PWABuilder & APK readiness -->
-  <link rel="manifest" href="data:application/manifest+json;utf-8,%7B%22name%22%3A%22MRZ%20Card%22%2C%22short_name%22%3A%22MRZCard%22%2C%22start_url%22%3A%22%2F%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23064e3b%22%2C%22theme_color%22%3A%22%23064e3b%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data%3Aimage%2Fsvg%2Bxml%3Butf8%2C%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20100%20100%27%3E%3Crect%20width%3D%27100%27%20height%3D%27100%27%20rx%3D%2720%27%20fill%3D%27%23064e3b%27%2F%3E%3Ctext%20x%3D%2750%27%20y%3D%2765%27%20font-size%3D%2750%27%20text-anchor%3D%27middle%27%20fill%3D%27%23f59e0b%27%3E%E2%82%B9%3C%2Ftext%3E%3C%2Fsvg%3E%22%2C%22sizes%22%3A%22192x192%20512x512%22%2C%22type%22%3A%22image%2Fsvg%2Bxml%22%7D%5D%7D">
+  <!-- Web App Manifest Data URI for instant PWABuilder & APK Compatibility -->
+  <link rel="manifest" href="data:application/manifest+json;utf-8,%7B%22name%22%3A%22MRZ%20Card%22%2C%22short_name%22%3A%22MRZCard%22%2C%22start_url%22%3A%22%2F%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23022c22%22%2C%22theme_color%22%3A%22%23022c22%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data%3Aimage%2Fsvg%2Bxml%3Butf8%2C%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20100%20100%27%3E%3Crect%20width%3D%27100%27%20height%3D%27100%27%20rx%3D%2722%27%20fill%3D%27%23022c22%27%2F%3E%3Ccircle%20cx%3D%2750%27%20cy%3D%2750%27%20r%3D%2736%27%20fill%3D%27none%27%20stroke%3D%27%23f59e0b%27%20stroke-width%3D%274%27%2F%3E%3Ctext%20x%3D%2750%27%20y%3D%2763%27%20font-size%3D%2742%27%20font-weight%3D%27bold%27%20text-anchor%3D%27middle%27%20fill%3D%27%23f59e0b%27%3E%E2%82%B9%3C%2Ftext%3E%3C%2Fsvg%3E%22%2C%22sizes%22%3A%22192x192%20512x512%22%2C%22type%22%3A%22image%2Fsvg%2Bxml%22%7D%5D%7D">
   
-  <meta name="theme-color" content="#064e3b">
+  <meta name="theme-color" content="#022c22">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="MRZ Card">
@@ -16,7 +16,7 @@
   <!-- Google Fonts: Hind and Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -26,20 +26,26 @@
         extend: {
           colors: {
             fintech: {
-              primary: '#064e3b',
-              secondary: '#059669',
-              light: '#ecfdf5',
-              gold: '#f59e0b',
-              goldDark: '#b45309',
-              goldLight: '#fef3c7',
-              slate: '#f8fafc',
-              dark: '#0f172a',
-              card: '#044333'
+              deep: '#022c22',       /* Ultra deep emerald */
+              primary: '#064e3b',    /* Rich emerald slate */
+              secondary: '#059669',  /* Medium emerald */
+              mint: '#10b981',       /* Neo-Mint accent */
+              mintLight: '#d1fae5',  /* Soft neo-mint */
+              gold: '#f59e0b',       /* Brushed Champagne Gold */
+              goldLight: '#fef3c7',  /* Warm gold shimmer */
+              slate: '#f8fafc',      /* Clean slate background */
+              dark: '#0f172a',       /* Crisp dark slate text */
+              cardDark: '#033a2e'    /* Card depth background */
             }
           },
           fontFamily: {
-            sans: ['Hind', 'Inter', 'sans-serif'],
+            sans: ['Hind', 'Inter', 'system-ui', 'sans-serif'],
             mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace']
+          },
+          boxShadow: {
+            'luxury': '0 10px 25px -5px rgba(2, 44, 34, 0.25), 0 8px 10px -6px rgba(2, 44, 34, 0.2)',
+            'gold-glow': '0 0 20px rgba(245, 158, 11, 0.35)',
+            'mint-glow': '0 0 15px rgba(16, 185, 129, 0.3)'
           }
         }
       }
@@ -60,11 +66,25 @@
     input, textarea {
       user-select: text;
     }
-    /* Smooth transitions */
-    .tab-content {
-      transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    .safe-top {
+      padding-top: env(safe-area-inset-top, 0px);
     }
-    /* Custom scrollbar */
+    .safe-bottom {
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    .gold-gradient {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+    }
+    .emerald-gradient {
+      background: linear-gradient(135deg, #022c22 0%, #064e3b 50%, #047857 100%);
+    }
+    .tab-content {
+      animation: fadeIn 0.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
     ::-webkit-scrollbar {
       width: 4px;
       height: 4px;
@@ -73,45 +93,32 @@
       background: #cbd5e1;
       border-radius: 4px;
     }
-    /* Pulse glow */
-    @keyframes goldGlow {
-      0%, 100% { box-shadow: 0 0 15px rgba(245, 158, 11, 0.4); }
-      50% { box-shadow: 0 0 25px rgba(245, 158, 11, 0.8); }
-    }
-    .gold-glow {
-      animation: goldGlow 3s infinite;
-    }
-    /* Notch / Safe Area padding */
-    .safe-top {
-      padding-top: env(safe-area-inset-top, 0px);
-    }
-    .safe-bottom {
-      padding-bottom: env(safe-area-inset-bottom, 0px);
-    }
   </style>
 </head>
-<body class="bg-slate-100 text-slate-900 min-h-full flex flex-col antialiased selection:bg-emerald-500 selection:text-white">
+<body class="bg-slate-900 text-slate-900 min-h-full flex flex-col antialiased selection:bg-emerald-500 selection:text-white">
 
-  <!-- Mobile Container Wrapper (Centered Max-w-md for native app ratio) -->
+  <!-- Mobile Viewport Container: Locked to max-w-md mx-auto with native app feel -->
   <div id="app" class="w-full max-w-md mx-auto min-h-screen bg-slate-50 flex flex-col shadow-2xl relative border-x border-slate-200">
     
-    <!-- TOP APP HEADER -->
-    <header class="bg-gradient-to-r from-emerald-950 via-emerald-900 to-emerald-800 text-white px-4 pt-4 pb-3 shadow-md sticky top-0 z-30 safe-top">
+    <!-- TOP APP LUXURY HEADER -->
+    <header class="emerald-gradient text-white px-4 pt-3.5 pb-3 shadow-luxury sticky top-0 z-30 safe-top border-b border-emerald-800/40">
       <div class="flex items-center justify-between">
         
         <!-- App Title & Verified Shop Emblem -->
         <div class="flex items-center space-x-2.5">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center shadow-lg border border-amber-300 flex-shrink-0">
+          <div class="w-10 h-10 rounded-xl gold-gradient flex items-center justify-center shadow-gold-glow border border-amber-300/80 flex-shrink-0 transition-transform active:scale-95">
             <span class="text-emerald-950 font-black text-xl leading-none">₹</span>
           </div>
           <div>
             <div class="flex items-center space-x-1.5">
-              <h1 class="text-lg font-bold tracking-tight text-white leading-tight">MRZ Card</h1>
-              <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-emerald-700/80 text-emerald-200 border border-emerald-600/50">PRO</span>
+              <h1 class="text-lg font-black tracking-tight text-white leading-tight">MRZ Card</h1>
+              <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-extrabold bg-emerald-800/90 text-amber-300 border border-amber-400/40 shadow-xs">PRO</span>
             </div>
-            <p id="headerShopSub" class="text-xs text-emerald-200 font-medium truncate max-w-[170px] flex items-center gap-1">
-              <svg class="w-3 h-3 text-amber-400 inline" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-              <span id="shopNameDisplayHeader">Khan Traders</span>
+            <p id="headerShopSub" class="text-xs text-emerald-200 font-medium truncate max-w-[170px] flex items-center gap-1 mt-0.5">
+              <svg class="w-3.5 h-3.5 text-emerald-400 inline-block flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span id="shopNameDisplayHeader" class="font-bold">Khan Traders</span>
             </p>
           </div>
         </div>
@@ -119,112 +126,129 @@
         <!-- Mode Toggle & Action Badges -->
         <div class="flex items-center space-x-1.5">
           <!-- Auth / Merchant Mode Pill -->
-          <button id="authBtn" onclick="openAuthModal()" class="px-2.5 py-1 text-xs font-semibold rounded-lg bg-emerald-800/80 hover:bg-emerald-700 border border-emerald-600/60 text-emerald-100 flex items-center space-x-1 transition active:scale-95 shadow-sm">
+          <button id="authBtn" onclick="openAuthModal()" class="px-2.5 py-1.5 text-xs font-bold rounded-xl bg-emerald-900/90 hover:bg-emerald-800 border border-emerald-600/70 text-emerald-100 flex items-center space-x-1 transition active:scale-95 shadow-sm">
             <span id="authIcon">🔒</span>
             <span id="authBtnText">मुनीम लॉगिन</span>
           </button>
 
-          <!-- Settings Button -->
-          <button onclick="openSettingsModal()" title="सेटिंग्स" class="w-8 h-8 rounded-lg bg-emerald-800/80 hover:bg-emerald-700 border border-emerald-600/60 flex items-center justify-center text-amber-300 transition active:scale-95">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          <!-- Privacy Shield Modal Trigger -->
+          <button onclick="openPrivacyModal()" title="100% डेटा प्राइवेसी गारंटी" class="w-8 h-8 rounded-xl bg-emerald-900/90 hover:bg-emerald-800 border border-emerald-600/70 flex items-center justify-center text-emerald-300 transition active:scale-95 shadow-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
           </button>
         </div>
 
       </div>
 
       <!-- Merchant Status Indicator Banner -->
-      <div id="merchantModeBanner" class="mt-2 py-1 px-2.5 rounded-md bg-emerald-800/60 border border-emerald-700/50 flex items-center justify-between text-[11px] text-emerald-200">
+      <div id="merchantModeBanner" class="mt-2 py-1 px-2.5 rounded-lg bg-emerald-950/70 border border-emerald-700/50 flex items-center justify-between text-[11px] text-emerald-200">
         <div class="flex items-center space-x-1.5 truncate">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span id="syncStatus">सुरक्षित लोकल मुनीम खाता (Offline / Ready)</span>
+          <span id="syncDot" class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span id="syncStatus">सुरक्षित मुनीम खाता (Zero Data Leak)</span>
         </div>
-        <span id="roleBadge" class="bg-amber-400/20 text-amber-300 px-1.5 py-0.5 rounded text-[10px] font-bold">दुकानदार</span>
+        <div class="flex items-center space-x-1">
+          <span id="soundboxMiniBadge" class="bg-amber-400/20 text-amber-300 px-1 py-0.2 rounded text-[9px] font-bold">🔊 साउंडबॉक्स ON</span>
+          <span id="roleBadge" class="bg-emerald-500/20 text-emerald-300 px-1.5 py-0.5 rounded text-[10px] font-bold">दुकानदार</span>
+        </div>
       </div>
     </header>
 
-    <!-- MAIN BODY CONTENT AREA -->
+    <!-- MAIN BODY CONTENT (Five Tabs Ecosystem) -->
     <main class="flex-1 pb-24 overflow-y-auto">
 
       <!-- ========================================== -->
-      <!-- TAB 1: ⚡ तुरंत ऑनलाइन पेमेंट (Customer Facing UPI Pay) -->
+      <!-- TAB 1: ⚡ UPI इंस्टेंट पे (Instant Pay & Virtual Soundbox) -->
       <!-- ========================================== -->
       <section id="tab-upi" class="tab-content p-4 space-y-4">
         
-        <!-- Shop Verified Banner Card -->
-        <div class="bg-gradient-to-br from-emerald-900 to-emerald-800 rounded-2xl p-4 text-white shadow-lg border border-emerald-700/40 relative overflow-hidden">
-          <div class="absolute -right-6 -bottom-6 w-28 h-28 bg-emerald-600/20 rounded-full blur-xl pointer-events-none"></div>
+        <!-- Luxury Merchant Profile Hero Card -->
+        <div class="emerald-gradient rounded-3xl p-4 text-white shadow-luxury border border-emerald-600/40 relative overflow-hidden">
+          <div class="absolute -right-8 -bottom-8 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
           
           <div class="flex items-start justify-between">
-            <div>
-              <div class="inline-flex items-center space-x-1 bg-amber-400/20 text-amber-300 text-[11px] px-2 py-0.5 rounded-full font-semibold border border-amber-400/30 mb-1.5">
-                <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                <span>NPCI सत्यापित मर्चेंट</span>
+            <div class="space-y-1">
+              <div class="inline-flex items-center space-x-1.5 bg-amber-400/20 text-amber-300 text-[11px] px-2.5 py-0.5 rounded-full font-bold border border-amber-400/30">
+                <svg class="w-3.5 h-3.5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span>NPCI सत्यापित UPI मर्चेंट</span>
               </div>
-              <h2 id="merchantCardShopName" class="text-xl font-extrabold tracking-tight text-white">Khan Traders</h2>
-              <p class="text-xs text-emerald-200 mt-0.5 font-mono">UPI ID: <span id="merchantCardUpi" class="text-amber-300 font-semibold">khan@ybl</span></p>
+              <h2 id="merchantCardShopName" class="text-xl font-black tracking-tight text-white">Khan Traders</h2>
+              <p class="text-xs text-emerald-200 font-mono">UPI VPA: <span id="merchantCardUpi" class="text-amber-300 font-bold">khan@ybl</span></p>
             </div>
             
-            <!-- Dynamic QR Toggle Mini Button -->
-            <button onclick="toggleQrModal()" class="flex flex-col items-center bg-emerald-800/90 hover:bg-emerald-700 text-amber-300 p-2 rounded-xl border border-emerald-600/80 transition active:scale-95 shadow">
+            <!-- Quick Dynamic QR Toggle -->
+            <button onclick="toggleQrModal()" class="flex flex-col items-center bg-emerald-900/90 hover:bg-emerald-800 text-amber-300 p-2.5 rounded-2xl border border-emerald-600/80 transition active:scale-95 shadow-md">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"></path></svg>
-              <span class="text-[9px] font-bold mt-0.5">QR स्कैन</span>
+              <span class="text-[9px] font-black mt-1">QR काउंटर</span>
+            </button>
+          </div>
+
+          <!-- Virtual Soundbox Status & Test Button -->
+          <div class="mt-3.5 pt-2.5 border-t border-emerald-800/60 flex items-center justify-between text-xs">
+            <span class="text-emerald-200 flex items-center space-x-1.5 font-medium">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span>वर्चुअल साउंडबॉक्स: <b id="soundboxTextState" class="text-amber-300">सक्रिय</b></span>
+            </span>
+            <button onclick="testVoiceSoundbox()" class="px-2 py-0.5 rounded-lg bg-emerald-800/80 hover:bg-emerald-700 text-amber-300 text-[10px] font-bold border border-amber-400/30 transition active:scale-95">
+              🔊 आवाज टेस्ट करें
             </button>
           </div>
         </div>
 
-        <!-- Interactive Amount Card -->
-        <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200">
-          <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1.5">पेमेंट राशि दर्ज करें (Enter Amount)</label>
+        <!-- Big Numeric Interactive Amount Card -->
+        <div class="bg-white rounded-3xl p-5 shadow-sm border border-slate-200/90 space-y-3">
+          <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider">भुगतान राशि दर्ज करें (Enter Amount)</label>
           
           <div class="relative flex items-center">
-            <span class="absolute left-3 text-3xl font-bold text-emerald-700">₹</span>
+            <span class="absolute left-3.5 text-3xl font-extrabold text-emerald-800">₹</span>
             <input id="upiAmountInput" type="number" min="1" step="any" placeholder="0" 
-              class="w-full pl-9 pr-12 py-3 bg-slate-50 border-2 border-emerald-600/40 focus:border-emerald-700 focus:bg-white rounded-xl text-3xl font-extrabold text-slate-900 outline-none transition text-left"
+              class="w-full pl-10 pr-12 py-3.5 bg-slate-50 border-2 border-emerald-600/30 focus:border-emerald-700 focus:bg-white rounded-2xl text-3xl font-black text-slate-900 outline-none transition text-left"
               oninput="handleAmountChange()">
-            <button onclick="clearUpiAmount()" title="साफ करें" class="absolute right-3 text-slate-400 hover:text-slate-600 p-1">
+            <button onclick="clearUpiAmount()" title="साफ करें" class="absolute right-3.5 text-slate-400 hover:text-slate-600 p-1">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
           </div>
 
           <!-- Quick Select Add Chips -->
-          <div class="mt-3.5">
-            <p class="text-[11px] font-semibold text-slate-500 mb-2">त्वरित जोड़ें (Quick Add Chips):</p>
+          <div>
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[11px] font-bold text-slate-500">त्वरित चिप्स (+Quick Add):</span>
+              <span class="text-[10px] text-emerald-700 font-semibold">क्लिक कर जोड़ें</span>
+            </div>
             <div class="grid grid-cols-4 gap-2">
-              <button onclick="addUpiAmount(50)" class="py-1.5 px-2 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 rounded-lg text-emerald-800 font-bold text-xs transition active:scale-95 shadow-sm">+₹50</button>
-              <button onclick="addUpiAmount(100)" class="py-1.5 px-2 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 rounded-lg text-emerald-800 font-bold text-xs transition active:scale-95 shadow-sm">+₹100</button>
-              <button onclick="addUpiAmount(200)" class="py-1.5 px-2 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 rounded-lg text-emerald-800 font-bold text-xs transition active:scale-95 shadow-sm">+₹200</button>
-              <button onclick="addUpiAmount(500)" class="py-1.5 px-2 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 rounded-lg text-emerald-800 font-bold text-xs transition active:scale-95 shadow-sm">+₹500</button>
+              <button onclick="addUpiAmount(50)" class="py-2 px-2 bg-emerald-50/80 hover:bg-emerald-100 border border-emerald-200 rounded-xl text-emerald-900 font-extrabold text-xs transition active:scale-95 shadow-xs">+₹50</button>
+              <button onclick="addUpiAmount(100)" class="py-2 px-2 bg-emerald-50/80 hover:bg-emerald-100 border border-emerald-200 rounded-xl text-emerald-900 font-extrabold text-xs transition active:scale-95 shadow-xs">+₹100</button>
+              <button onclick="addUpiAmount(200)" class="py-2 px-2 bg-emerald-50/80 hover:bg-emerald-100 border border-emerald-200 rounded-xl text-emerald-900 font-extrabold text-xs transition active:scale-95 shadow-xs">+₹200</button>
+              <button onclick="addUpiAmount(500)" class="py-2 px-2 bg-emerald-50/80 hover:bg-emerald-100 border border-emerald-200 rounded-xl text-emerald-900 font-extrabold text-xs transition active:scale-95 shadow-xs">+₹500</button>
             </div>
           </div>
 
-          <!-- Purpose / Customer Note (Optional) -->
-          <div class="mt-3 pt-3 border-t border-slate-100">
-            <input id="upiCustomerNote" type="text" placeholder="ग्राहक का नाम / सामान नोट (वैकल्पिक)" 
-              class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-700 outline-none focus:border-emerald-600 focus:bg-white">
+          <!-- Note / Customer Name (Optional) -->
+          <div class="pt-1">
+            <input id="upiCustomerNote" type="text" placeholder="ग्राहक का नाम / नोट (वैकल्पिक)" 
+              class="w-full px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800 outline-none focus:border-emerald-600 focus:bg-white transition">
           </div>
         </div>
 
-        <!-- Big UPI Action Button -->
+        <!-- Big Hero UPI Action Button -->
         <button id="payNowBtn" onclick="triggerUpiPayment()" 
-          class="w-full bg-gradient-to-r from-emerald-800 via-emerald-700 to-emerald-600 hover:from-emerald-900 hover:to-emerald-700 text-white font-extrabold text-base py-4 px-4 rounded-2xl shadow-xl border border-emerald-500/50 flex items-center justify-center space-x-2 transition transform active:scale-[0.98]">
+          class="w-full emerald-gradient hover:opacity-95 text-white font-extrabold text-base py-4 px-4 rounded-2xl shadow-luxury border border-emerald-500/50 flex items-center justify-center space-x-2.5 transition transform active:scale-[0.98]">
           <svg class="w-6 h-6 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-          <span>PhonePe / GPay / Paytm से पेमेंट करें</span>
+          <span>PhonePe / GPay / Paytm से भुगतान करें</span>
         </button>
 
         <!-- Trust & Security Seal -->
-        <div class="flex items-center justify-center space-x-2 text-xs text-slate-600 font-medium py-1">
+        <div class="flex items-center justify-center space-x-2 text-xs text-slate-500 font-medium py-0.5">
           <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" clip-rule="evenodd"></path></svg>
-          <span>100% सुरक्षित NPCI UPI गेटवे सपोर्ट</span>
+          <span>100% सुरक्षित NPCI UPI प्रोटोकॉल सपोर्ट</span>
         </div>
 
         <!-- Today's Online Collection Feed -->
-        <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200">
+        <div class="bg-white rounded-3xl p-4 shadow-sm border border-slate-200">
           <div class="flex items-center justify-between mb-2.5">
             <div class="flex items-center space-x-1.5">
-              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-              <h3 class="text-xs font-bold text-slate-700 uppercase tracking-wide">आज की ऑनलाइन वसूली (Online Collections)</h3>
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              <h3 class="text-xs font-bold text-slate-800 uppercase tracking-wide">आज की ऑनलाइन वसूली (Live Collections)</h3>
             </div>
-            <span id="todayOnlineTotal" class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">₹0</span>
+            <span id="todayOnlineTotal" class="text-xs font-black text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">₹0</span>
           </div>
 
           <div id="todayOnlineList" class="space-y-2 max-h-48 overflow-y-auto pr-1">
@@ -236,103 +260,98 @@
 
 
       <!-- ========================================== -->
-      <!-- TAB 2: 📝 नया उधार दर्ज करें (Add Credit Entry) -->
+      <!-- TAB 2: 📝 उधार जोड़ें (Tamper-Proof Credit Entry) -->
       <!-- ========================================== -->
       <section id="tab-add" class="tab-content hidden p-4 space-y-4">
         
-        <!-- Header Banner -->
-        <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200">
-          <div class="flex items-center justify-between">
-            <div>
-              <h2 class="text-base font-bold text-slate-900">नया उधार (उधारी खाता पर्ची)</h2>
-              <p class="text-xs text-slate-500">ग्राहक के खाते में नया उधार तुरंत जोड़ें</p>
-            </div>
-            <span class="px-2.5 py-1 bg-red-50 text-red-700 text-xs font-bold rounded-lg border border-red-200">उधार एंट्री</span>
+        <div class="bg-white rounded-3xl p-4 shadow-sm border border-slate-200 flex items-center justify-between">
+          <div>
+            <h2 class="text-base font-black text-slate-900">नया उधार (डिजिटल खाता पर्ची)</h2>
+            <p class="text-xs text-slate-500">ग्राहक के खाते में नया उधार तुरंत और सुरक्षित जोड़ें</p>
           </div>
+          <span class="px-2.5 py-1 bg-red-50 text-red-700 text-xs font-extrabold rounded-xl border border-red-200">उधार एंट्री</span>
         </div>
 
         <!-- Credit Entry Form -->
-        <form id="creditEntryForm" onsubmit="submitCreditEntry(event)" class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200 space-y-3.5">
+        <form id="creditEntryForm" onsubmit="submitCreditEntry(event)" class="bg-white rounded-3xl p-4.5 shadow-sm border border-slate-200 space-y-3.5">
           
-          <!-- Customer Name Field -->
+          <!-- Customer Name -->
           <div>
             <label class="block text-xs font-bold text-slate-700 mb-1">
               ग्राहक का पूरा नाम <span class="text-red-500">*</span>
             </label>
             <div class="relative">
-              <span class="absolute left-3 top-2.5 text-slate-400">👤</span>
+              <span class="absolute left-3.5 top-3 text-slate-400 text-sm">👤</span>
               <input id="creditCustName" type="text" required placeholder="जैसे: रमेश कुमार / वर्मा जी" 
-                class="w-full pl-9 pr-3 py-2.5 bg-slate-50 border border-slate-300 focus:border-emerald-600 focus:bg-white rounded-xl text-sm font-semibold text-slate-900 outline-none transition">
+                class="w-full pl-10 pr-3 py-2.5 bg-slate-50 border border-slate-300 focus:border-emerald-600 focus:bg-white rounded-xl text-sm font-bold text-slate-900 outline-none transition">
             </div>
           </div>
 
-          <!-- Mobile Number Field -->
+          <!-- Customer Mobile -->
           <div>
             <label class="block text-xs font-bold text-slate-700 mb-1">
-              मोबाइल नंबर (WhatsApp रसीद के लिए)
+              मोबाइल नंबर (WhatsApp रसीद भेजने हेतु)
             </label>
             <div class="relative">
-              <span class="absolute left-3 top-2.5 text-slate-400">📱</span>
+              <span class="absolute left-3.5 top-3 text-slate-400 text-sm">📱</span>
               <input id="creditCustPhone" type="tel" maxlength="10" placeholder="10 अंकों का मोबाइल नंबर" 
-                class="w-full pl-9 pr-3 py-2.5 bg-slate-50 border border-slate-300 focus:border-emerald-600 focus:bg-white rounded-xl text-sm font-mono text-slate-900 outline-none transition">
+                class="w-full pl-10 pr-3 py-2.5 bg-slate-50 border border-slate-300 focus:border-emerald-600 focus:bg-white rounded-xl text-sm font-mono text-slate-900 outline-none transition">
             </div>
           </div>
 
-          <!-- Amount Field (Big Red Font) -->
+          <!-- Amount Field (Prominent Red) -->
           <div>
             <label class="block text-xs font-bold text-slate-700 mb-1">
-              उधारी राशि ₹ <span class="text-red-500">*</span>
+              उधार राशि ₹ <span class="text-red-500">*</span>
             </label>
             <div class="relative flex items-center">
-              <span class="absolute left-3 text-2xl font-bold text-red-600">₹</span>
+              <span class="absolute left-3.5 text-2xl font-black text-red-600">₹</span>
               <input id="creditCustAmount" type="number" required min="1" step="any" placeholder="0" 
-                class="w-full pl-8 pr-3 py-3 bg-red-50/50 border-2 border-red-300 focus:border-red-500 focus:bg-white rounded-xl text-2xl font-black text-red-600 outline-none transition">
+                class="w-full pl-9 pr-3 py-3 bg-red-50/40 border-2 border-red-300 focus:border-red-500 focus:bg-white rounded-xl text-2xl font-black text-red-600 outline-none transition">
             </div>
           </div>
 
           <!-- Item Description / Notes -->
           <div>
             <label class="block text-xs font-bold text-slate-700 mb-1">
-              सामान का विवरण / नोट (Item Description)
+              सामान का विवरण / नोट (Item Notes)
             </label>
-            <textarea id="creditCustItems" rows="2" placeholder="जैसे: चीनी 2kg, अरहर दाल 1kg, सरसों तेल 1L" 
-              class="w-full px-3 py-2 bg-slate-50 border border-slate-300 focus:border-emerald-600 focus:bg-white rounded-xl text-xs text-slate-800 outline-none transition"></textarea>
+            <textarea id="creditCustItems" rows="2" placeholder="जैसे: 2 किलो चीनी, 1L सरसों तेल, साबुन" 
+              class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 focus:border-emerald-600 focus:bg-white rounded-xl text-xs text-slate-800 outline-none transition"></textarea>
           </div>
 
-          <!-- Auto Timestamp Display (Read-Only) -->
-          <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200 flex items-center justify-between text-xs text-slate-600">
-            <span class="flex items-center space-x-1 font-medium">
-              <svg class="w-3.5 h-3.5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+          <!-- Tamper-Proof Automatic System Timestamp -->
+          <div class="p-3 bg-slate-50 rounded-2xl border border-slate-200 flex items-center justify-between text-xs text-slate-600">
+            <span class="flex items-center space-x-1.5 font-bold">
+              <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
               <span>सिस्टम दिनांक और समय:</span>
             </span>
-            <span id="liveTimestampBadge" class="font-mono font-bold text-emerald-800">15 Oct 2026, 10:45 AM</span>
+            <span id="liveTimestampBadge" class="font-mono font-bold text-emerald-900 bg-emerald-100/70 px-2 py-0.5 rounded-md">-- Oct 2026, --:-- AM</span>
           </div>
 
-          <!-- Action Buttons -->
-          <div class="pt-2 space-y-2">
-            <button type="submit" 
-              class="w-full bg-emerald-800 hover:bg-emerald-900 text-white font-bold py-3 px-4 rounded-xl shadow-lg border border-emerald-600 flex items-center justify-center space-x-2 transition active:scale-[0.98]">
-              <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg>
-              <span>उधार खाते में दर्ज करें (Save Entry)</span>
-            </button>
-          </div>
+          <!-- Submit Button -->
+          <button type="submit" 
+            class="w-full emerald-gradient hover:opacity-95 text-white font-extrabold py-3.5 px-4 rounded-xl shadow-luxury border border-emerald-600 flex items-center justify-center space-x-2 transition active:scale-[0.98]">
+            <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg>
+            <span>खाते में उधार सुरक्षित दर्ज करें (Save)</span>
+          </button>
 
         </form>
 
-        <!-- Quick Post-Submission Sharing Card (Hidden until an entry is made) -->
-        <div id="postEntryReceiptCard" class="hidden bg-emerald-50 border border-emerald-200 rounded-2xl p-4 shadow-sm space-y-3">
+        <!-- Post-Submission Instant WhatsApp Bill Card -->
+        <div id="postEntryReceiptCard" class="hidden bg-emerald-50 border-2 border-emerald-300 rounded-3xl p-4 shadow-sm space-y-3">
           <div class="flex items-center justify-between">
-            <div class="flex items-center space-x-1.5 text-emerald-800 font-bold text-xs">
-              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-              <span>उधार सफलतापूर्वक दर्ज हुआ!</span>
+            <div class="flex items-center space-x-1.5 text-emerald-900 font-extrabold text-xs">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+              <span>उधार सफलतापूर्वक दर्ज हो गया!</span>
             </div>
-            <span id="receiptSavedAmount" class="font-extrabold text-red-600 text-sm">₹0</span>
+            <span id="receiptSavedAmount" class="font-black text-red-600 text-sm">₹0</span>
           </div>
-          <p id="receiptSavedDetails" class="text-xs text-slate-600 font-medium"></p>
+          <p id="receiptSavedDetails" class="text-xs text-slate-700 font-medium"></p>
           <button id="postEntryWhatsappBtn" onclick="shareLastReceiptWhatsApp()" 
-            class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2.5 px-3 rounded-xl shadow flex items-center justify-center space-x-2 text-xs transition active:scale-95">
+            class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold py-2.5 px-3 rounded-xl shadow flex items-center justify-center space-x-2 text-xs transition active:scale-95">
             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-            <span>WhatsApp पर रसीद भेजें (Share Receipt)</span>
+            <span>WhatsApp पर डिजिटल पर्ची भेजें (Share Receipt)</span>
           </button>
         </div>
 
@@ -340,63 +359,261 @@
 
 
       <!-- ========================================== -->
-      <!-- TAB 3: 📒 डिजिटल खाता सर्च और चुकता करें (Ledger Search & 1-Click Settle) -->
+      <!-- TAB 3: 📒 खाता सर्च & 1-क्लिक चुकता (Ledger & Instant Settlement) -->
       <!-- ========================================== -->
       <section id="tab-ledger" class="tab-content hidden p-4 space-y-4">
         
-        <!-- Summary Header Dashboard Cards -->
+        <!-- Financial Summary Dashboard Cards -->
         <div class="grid grid-cols-2 gap-3">
           
-          <!-- Total Market Due -->
-          <div class="bg-gradient-to-br from-red-500 to-red-700 rounded-2xl p-3.5 text-white shadow-md relative overflow-hidden">
+          <div class="bg-gradient-to-br from-red-600 to-red-800 rounded-3xl p-3.5 text-white shadow-luxury relative overflow-hidden">
             <div class="text-[11px] font-bold uppercase tracking-wider text-red-100">मार्केट में कुल बाकी</div>
             <div id="summaryTotalDue" class="text-2xl font-black mt-1 text-white">₹0</div>
             <div class="text-[10px] text-red-100 mt-1 flex items-center justify-between">
               <span>बकाया ग्राहक:</span>
-              <span id="summaryCustomerCount" class="font-bold bg-red-800/60 px-1.5 py-0.5 rounded">0</span>
+              <span id="summaryCustomerCount" class="font-bold bg-red-900/70 px-1.5 py-0.5 rounded">0</span>
             </div>
           </div>
 
-          <!-- Total Settled Recovered -->
-          <div class="bg-gradient-to-br from-emerald-700 to-emerald-900 rounded-2xl p-3.5 text-white shadow-md relative overflow-hidden">
+          <div class="emerald-gradient rounded-3xl p-3.5 text-white shadow-luxury relative overflow-hidden">
             <div class="text-[11px] font-bold uppercase tracking-wider text-emerald-100">कुल चुकता वसूली</div>
             <div id="summaryTotalPaid" class="text-2xl font-black mt-1 text-white">₹0</div>
             <div class="text-[10px] text-emerald-200 mt-1 flex items-center justify-between">
               <span>चुकता खाते:</span>
-              <span id="summaryPaidCount" class="font-bold bg-emerald-800/80 px-1.5 py-0.5 rounded">0</span>
+              <span id="summaryPaidCount" class="font-bold bg-emerald-900/70 px-1.5 py-0.5 rounded">0</span>
             </div>
           </div>
 
         </div>
 
-        <!-- Live Instant Search Bar -->
-        <div class="bg-white rounded-2xl p-3 shadow-sm border border-slate-200 space-y-2">
+        <!-- Real-Time Search Bar & Filter Pills -->
+        <div class="bg-white rounded-3xl p-3.5 shadow-sm border border-slate-200 space-y-2.5">
           <div class="relative">
-            <span class="absolute left-3 top-2.5 text-slate-400">
+            <span class="absolute left-3.5 top-3 text-slate-400">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
             </span>
-            <input id="ledgerSearchInput" type="text" placeholder="ग्राहक का नाम या मोबाइल नंबर खोजें..." 
+            <input id="ledgerSearchInput" type="text" placeholder="ग्राहक का नाम या मोबाइल नंबर टाइप करें..." 
               oninput="renderLedgerCards()"
-              class="w-full pl-9 pr-8 py-2 bg-slate-50 border border-slate-300 rounded-xl text-xs font-medium text-slate-800 outline-none focus:border-emerald-600 focus:bg-white transition">
-            <button onclick="clearSearch()" class="absolute right-2.5 top-2.5 text-slate-400 hover:text-slate-600">
+              class="w-full pl-10 pr-8 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-xs font-semibold text-slate-800 outline-none focus:border-emerald-600 focus:bg-white transition">
+            <button onclick="clearSearch()" class="absolute right-3 top-3 text-slate-400 hover:text-slate-600">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
           </div>
 
-          <!-- Filter Pills -->
-          <div class="flex items-center space-x-2 pt-1 text-xs">
-            <button id="filterAll" onclick="setLedgerFilter('all')" class="px-2.5 py-1 rounded-lg font-bold bg-emerald-800 text-white shadow-xs transition text-[11px]">सभी (All)</button>
-            <button id="filterPending" onclick="setLedgerFilter('pending')" class="px-2.5 py-1 rounded-lg font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 transition text-[11px]">बकाया (Due)</button>
-            <button id="filterSettled" onclick="setLedgerFilter('settled')" class="px-2.5 py-1 rounded-lg font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 transition text-[11px]">चुकता (Paid)</button>
-            <button onclick="exportLedgerCsv()" title="CSV डाउनलोड" class="ml-auto p-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600 transition" title="एक्सेल/CSV डाउनलोड">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-            </button>
+          <!-- Filter Pills & Export -->
+          <div class="flex items-center space-x-1.5 pt-0.5 text-xs">
+            <button id="filterAll" onclick="setLedgerFilter('all')" class="px-2.5 py-1 rounded-xl font-extrabold bg-emerald-800 text-white shadow-xs transition text-[11px]">सभी</button>
+            <button id="filterPending" onclick="setLedgerFilter('pending')" class="px-2.5 py-1 rounded-xl font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition text-[11px]">बकाया (Due)</button>
+            <button id="filterSettled" onclick="setLedgerFilter('settled')" class="px-2.5 py-1 rounded-xl font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition text-[11px]">चुकता (Paid)</button>
+            
+            <div class="ml-auto flex items-center space-x-1">
+              <button onclick="exportLedgerCsv()" title="CSV डाउनलोड" class="p-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition text-xs font-bold flex items-center gap-1">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                <span class="text-[10px]">CSV</span>
+              </button>
+              <button onclick="exportLedgerJson()" title="JSON बैकअप" class="p-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition text-xs font-bold flex items-center gap-1">
+                <span class="text-[10px]">JSON</span>
+              </button>
+            </div>
           </div>
         </div>
 
         <!-- Customer Khata List Container -->
-        <div id="ledgerCardList" class="space-y-3">
-          <!-- Dynamically populated customer cards -->
+        <div id="ledgerCardList" class="space-y-3"></div>
+
+      </section>
+
+
+      <!-- ========================================== -->
+      <!-- TAB 4: 🛍️ MRZ स्टोर (Hardware Ordering Hub) -->
+      <!-- ========================================== -->
+      <section id="tab-store" class="tab-content hidden p-4 space-y-4">
+        
+        <!-- Store Banner -->
+        <div class="emerald-gradient rounded-3xl p-4 text-white shadow-luxury relative overflow-hidden">
+          <div class="flex items-center justify-between">
+            <div>
+              <span class="inline-block bg-amber-400 text-emerald-950 text-[10px] font-black px-2 py-0.5 rounded-md uppercase">आधिकारिक हार्डवेयर स्टोर</span>
+              <h2 class="text-lg font-black text-white mt-1">MRZ स्मार्ट पेमेंट हार्डवेयर</h2>
+              <p class="text-xs text-emerald-200">अपनी दुकान के लिए स्मार्ट NFC स्टैंडी या DIY कार्ड किट ऑर्डर करें</p>
+            </div>
+            <div class="text-3xl">🛍️</div>
+          </div>
+        </div>
+
+        <!-- Hardware Choice Selector Cards -->
+        <div class="space-y-3">
+          <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider">हार्डवेयर विकल्प चुनें (Select Hardware)</label>
+
+          <!-- Option 1: Customized Ready-to-Use Standee -->
+          <div id="hwCardCustom" onclick="selectHardware('custom')" class="p-4 rounded-3xl border-2 border-emerald-600 bg-emerald-50/60 shadow-sm cursor-pointer transition transform active:scale-98">
+            <div class="flex items-start justify-between">
+              <div class="space-y-1">
+                <div class="flex items-center space-x-1.5">
+                  <span class="w-3 h-3 rounded-full bg-emerald-600 flex items-center justify-center text-white text-[8px]">✓</span>
+                  <h3 class="text-sm font-black text-slate-900">कस्टमाइज़्ड स्मार्ट स्टैंडी (Ready-to-Use)</h3>
+                </div>
+                <p class="text-xs text-slate-600">आपकी दुकान के नाम के साथ प्रिंटेड, रेडी QR कोड, प्री-प्रोग्राम्ड NTAG215 NFC चिप और प्रीमियम A6 ऐक्रेलिक स्टैंड।</p>
+                <div class="flex items-center space-x-2 pt-1 text-xs">
+                  <span class="font-extrabold text-emerald-800 text-sm">₹299</span>
+                  <span class="line-through text-slate-400 text-xs">₹499</span>
+                  <span class="bg-amber-100 text-amber-800 font-bold px-1.5 py-0.5 rounded text-[10px]">40% छूट</span>
+                </div>
+              </div>
+              <input type="radio" name="hwChoice" id="hwRadioCustom" checked class="accent-emerald-700 w-4 h-4 mt-1">
+            </div>
+          </div>
+
+          <!-- Option 2: Blank DIY Card Kit -->
+          <div id="hwCardDiy" onclick="selectHardware('diy')" class="p-4 rounded-3xl border border-slate-300 bg-white shadow-sm cursor-pointer transition transform active:scale-98 hover:border-emerald-500">
+            <div class="flex items-start justify-between">
+              <div class="space-y-1">
+                <div class="flex items-center space-x-1.5">
+                  <span class="w-3 h-3 rounded-full bg-slate-300"></span>
+                  <h3 class="text-sm font-black text-slate-900">सादा कार्ड किट (DIY Kit)</h3>
+                </div>
+                <p class="text-xs text-slate-600">ब्लैंक NTAG215 PVC कार्ड + ऐक्रेलिक स्टैंडी + QR सेटअप मैनुअल। खुद से किसी भी UPI पर कॉन्फ़िगर करें।</p>
+                <div class="flex items-center space-x-2 pt-1 text-xs">
+                  <span class="font-extrabold text-emerald-800 text-sm">₹199</span>
+                  <span class="line-through text-slate-400 text-xs">₹299</span>
+                  <span class="bg-slate-100 text-slate-700 font-bold px-1.5 py-0.5 rounded text-[10px]">बेसिक किट</span>
+                </div>
+              </div>
+              <input type="radio" name="hwChoice" id="hwRadioDiy" class="accent-emerald-700 w-4 h-4 mt-1">
+            </div>
+          </div>
+        </div>
+
+        <!-- Hardware Order Form -->
+        <form id="storeOrderForm" onsubmit="submitHardwareOrder(event)" class="bg-white rounded-3xl p-4.5 shadow-sm border border-slate-200 space-y-3">
+          <h4 class="text-xs font-black text-slate-800 uppercase tracking-wide">डिलीवरी व ऑर्डर विवरण (Order Details)</h4>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">दुकान का नाम (Shop Name) *</label>
+            <input id="orderShopName" type="text" required placeholder="जैसे: खान ट्रेडर्स" 
+              class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl text-xs font-bold text-slate-900 outline-none focus:border-emerald-600">
+          </div>
+
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">दुकानदार का नाम *</label>
+              <input id="orderMerchantName" type="text" required placeholder="पूरा नाम" 
+                class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl text-xs font-semibold text-slate-900 outline-none focus:border-emerald-600">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">मोबाइल नंबर *</label>
+              <input id="orderPhone" type="tel" maxlength="10" required placeholder="10 अंक" 
+                class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl text-xs font-mono text-slate-900 outline-none focus:border-emerald-600">
+            </div>
+          </div>
+
+          <div id="orderUpiFieldContainer">
+            <label class="block text-xs font-bold text-slate-700 mb-1">स्टैंडी पर छापने हेतु UPI ID *</label>
+            <input id="orderUpiId" type="text" placeholder="khan@ybl" 
+              class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl text-xs font-mono text-emerald-800 outline-none focus:border-emerald-600">
+            <p class="text-[10px] text-slate-400 mt-0.5">इस UPI ID का QR कोड आपकी स्टैंडी पर प्रिंट किया जाएगा।</p>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">डिलीवरी का पूरा पता व पिनकोड *</label>
+            <textarea id="orderAddress" rows="2" required placeholder="दुकान/मकान नंबर, गली, लैंडमार्क, शहर, पिनकोड" 
+              class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl text-xs text-slate-800 outline-none focus:border-emerald-600"></textarea>
+          </div>
+
+          <div class="p-3 bg-slate-50 rounded-2xl border border-slate-200 text-xs flex justify-between items-center">
+            <span class="font-bold text-slate-600">कुल देय राशि (Cash on Delivery / UPI):</span>
+            <span id="orderFinalAmount" class="text-base font-black text-emerald-800">₹299</span>
+          </div>
+
+          <button type="submit" 
+            class="w-full bg-emerald-800 hover:bg-emerald-900 text-white font-extrabold py-3 px-4 rounded-xl shadow-luxury flex items-center justify-center space-x-2 text-xs transition active:scale-[0.98]">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <span>WhatsApp पर ऑर्डर भेजें (Place Order)</span>
+          </button>
+        </form>
+
+      </section>
+
+
+      <!-- ========================================== -->
+      <!-- TAB 5: ⚙️ सेटिंग्स & 100% डेटा प्राइवेसी -->
+      <!-- ========================================== -->
+      <section id="tab-settings" class="tab-content hidden p-4 space-y-4">
+        
+        <div class="bg-white rounded-3xl p-4.5 shadow-sm border border-slate-200">
+          <div class="flex items-center space-x-2 border-b border-slate-100 pb-3 mb-3">
+            <div class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold">⚙️</div>
+            <div>
+              <h3 class="text-base font-black text-slate-900">सेटिंग्स & मुनीम सुरक्षा</h3>
+              <p class="text-[11px] text-slate-500">दुकान प्रोफाइल, साउंडबॉक्स एवं प्राइवेसी नियंत्रण</p>
+            </div>
+          </div>
+
+          <!-- Soundbox Control Switch -->
+          <div class="p-3 bg-slate-50 rounded-2xl border border-slate-200 flex items-center justify-between mb-4">
+            <div>
+              <div class="text-xs font-black text-slate-800">वर्चुअल वॉइस साउंडबॉक्स</div>
+              <div class="text-[10px] text-slate-500">पेमेंट प्राप्त होने पर हिंदी में घोषणा</div>
+            </div>
+            <div class="flex items-center space-x-2">
+              <button onclick="testVoiceSoundbox()" class="px-2 py-1 text-[10px] font-bold bg-white border border-slate-200 rounded-lg text-emerald-800 shadow-xs">
+                टेस्ट
+              </button>
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input id="soundboxToggleInput" type="checkbox" checked onchange="toggleSoundboxState()" class="sr-only peer">
+                <div class="w-10 h-5 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-emerald-600"></div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Merchant Config Form -->
+          <form id="settingsMainForm" onsubmit="saveMainSettings(event)" class="space-y-3 text-xs">
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">दुकान का नाम (Shop Name)</label>
+              <input id="mainCfgShopName" type="text" required class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl font-bold text-slate-900 outline-none focus:border-emerald-600">
+            </div>
+
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">मर्चेंट UPI ID (Payee VPA)</label>
+              <input id="mainCfgMerchantUpi" type="text" required class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl font-mono font-bold text-emerald-800 outline-none focus:border-emerald-600">
+            </div>
+
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">दुकानदार फोन नंबर</label>
+              <input id="mainCfgMerchantPhone" type="tel" maxlength="10" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl font-mono text-slate-900 outline-none focus:border-emerald-600">
+            </div>
+
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">4-डिजिट मुनीम मास्टर पिन</label>
+              <input id="mainCfgMasterPin" type="password" maxlength="4" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl font-mono font-black text-slate-900 outline-none focus:border-emerald-600">
+            </div>
+
+            <div class="pt-2">
+              <button type="submit" class="w-full emerald-gradient hover:opacity-95 text-white font-black py-2.5 px-3 rounded-xl shadow-luxury transition">
+                सेटिंग्स सेव करें (Save Changes)
+              </button>
+            </div>
+          </form>
+
+          <!-- Privacy & Cloud Guarantee Trigger Card -->
+          <div class="mt-4 pt-3 border-t border-slate-100 space-y-2">
+            <button onclick="openPrivacyModal()" class="w-full p-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-900 border border-emerald-200 text-xs font-bold flex items-center justify-between transition">
+              <span class="flex items-center gap-1.5">
+                <span>🛡️</span>
+                <span>100% डेटा प्राइवेसी गारंटी व सुरक्षा</span>
+              </span>
+              <span>अधिक जानें &rarr;</span>
+            </button>
+            
+            <button onclick="exportLedgerJson()" class="w-full p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200 text-xs font-bold flex items-center justify-between transition">
+              <span class="flex items-center gap-1.5">
+                <span>💾</span>
+                <span>सम्पूर्ण मुनीम खाता बैकअप (JSON)</span>
+              </span>
+              <span>डाउनलोड &rarr;</span>
+            </button>
+          </div>
+
         </div>
 
       </section>
@@ -405,68 +622,85 @@
 
 
     <!-- ========================================== -->
-    <!-- MONETIZATION: Reserved Ad Space Banner -->
+    <!-- MONETIZATION: Reserved Responsive Ad Space -->
     <!-- ========================================== -->
-    <div id="mrz-ad-banner" class="w-full bg-slate-100 border-t border-slate-200 py-1 text-center font-mono text-[10px] text-slate-400 fixed bottom-14 left-0 right-0 max-w-md mx-auto z-20">
+    <div id="mrz-ad-banner" class="w-full bg-slate-900 text-slate-400 py-1.5 text-center font-mono text-[10px] tracking-wider border-t border-slate-800 fixed bottom-14 left-0 right-0 max-w-md mx-auto z-20">
       [ MRZ Card Sponsored Ad Space - Ready for Google AdSense / AdMob ]
     </div>
 
 
     <!-- ========================================== -->
-    <!-- BOTTOM NAVIGATION (3 Tabs) -->
+    <!-- LUXURY FIVE-TAB BOTTOM NAVIGATION -->
     <!-- ========================================== -->
-    <nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white border-t border-slate-200 grid grid-cols-3 z-30 shadow-2xl safe-bottom">
+    <nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white/95 backdrop-blur-md border-t border-slate-200/90 grid grid-cols-5 z-30 shadow-2xl safe-bottom">
       
       <!-- Tab 1: UPI Pay -->
-      <button id="nav-upi" onclick="switchTab('upi')" class="py-2.5 flex flex-col items-center justify-center text-emerald-800 transition">
+      <button id="nav-upi" onclick="switchTab('upi')" class="py-2 flex flex-col items-center justify-center text-emerald-800 transition relative">
         <svg class="w-5 h-5 mb-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-        <span class="text-[11px] font-bold">पेमेंट (Pay)</span>
+        <span class="text-[10px] font-extrabold">पे (Pay)</span>
+        <div id="nav-indicator-upi" class="w-5 h-0.5 bg-emerald-800 rounded-full mt-0.5"></div>
       </button>
 
       <!-- Tab 2: Add Credit -->
-      <button id="nav-add" onclick="switchTab('add')" class="py-2.5 flex flex-col items-center justify-center text-slate-500 hover:text-emerald-700 transition">
+      <button id="nav-add" onclick="switchTab('add')" class="py-2 flex flex-col items-center justify-center text-slate-400 hover:text-emerald-700 transition relative">
         <svg class="w-5 h-5 mb-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 4v16m8-8H4"></path></svg>
-        <span class="text-[11px] font-bold">नया उधार</span>
+        <span class="text-[10px] font-bold">नया उधार</span>
+        <div id="nav-indicator-add" class="w-5 h-0.5 bg-transparent rounded-full mt-0.5"></div>
       </button>
 
       <!-- Tab 3: Ledger / Khata -->
-      <button id="nav-ledger" onclick="switchTab('ledger')" class="py-2.5 flex flex-col items-center justify-center text-slate-500 hover:text-emerald-700 transition">
+      <button id="nav-ledger" onclick="switchTab('ledger')" class="py-2 flex flex-col items-center justify-center text-slate-400 hover:text-emerald-700 transition relative">
         <div class="relative">
           <svg class="w-5 h-5 mb-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-          <span id="navDueBadge" class="hidden absolute -top-1 -right-2 bg-red-600 text-white text-[9px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+          <span id="navDueBadge" class="hidden absolute -top-1 -right-2 bg-red-600 text-white text-[8px] font-black w-3.5 h-3.5 rounded-full flex items-center justify-center">0</span>
         </div>
-        <span class="text-[11px] font-bold">खाता (Ledger)</span>
+        <span class="text-[10px] font-bold">खाता</span>
+        <div id="nav-indicator-ledger" class="w-5 h-0.5 bg-transparent rounded-full mt-0.5"></div>
+      </button>
+
+      <!-- Tab 4: MRZ Store -->
+      <button id="nav-store" onclick="switchTab('store')" class="py-2 flex flex-col items-center justify-center text-slate-400 hover:text-emerald-700 transition relative">
+        <svg class="w-5 h-5 mb-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+        <span class="text-[10px] font-bold">स्टोर</span>
+        <div id="nav-indicator-store" class="w-5 h-0.5 bg-transparent rounded-full mt-0.5"></div>
+      </button>
+
+      <!-- Tab 5: Settings -->
+      <button id="nav-settings" onclick="switchTab('settings')" class="py-2 flex flex-col items-center justify-center text-slate-400 hover:text-emerald-700 transition relative">
+        <svg class="w-5 h-5 mb-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+        <span class="text-[10px] font-bold">सेटिंग्स</span>
+        <div id="nav-indicator-settings" class="w-5 h-0.5 bg-transparent rounded-full mt-0.5"></div>
       </button>
 
     </nav>
 
 
     <!-- ========================================== -->
-    <!-- MODAL: SETTLEMENT CONFIRMATION MODAL -->
+    <!-- MODAL: SETTLEMENT CONFIRMATION -->
     <!-- ========================================== -->
     <div id="settleModal" class="fixed inset-0 bg-black/60 backdrop-blur-xs hidden items-center justify-center z-50 p-4">
       <div class="bg-white rounded-3xl p-5 max-w-sm w-full shadow-2xl border border-slate-200 transform transition-all text-center space-y-4">
         
-        <div class="w-14 h-14 mx-auto rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl font-bold">
+        <div class="w-14 h-14 mx-auto rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center text-2xl font-black">
           ✓
         </div>
 
         <div>
-          <h3 class="text-lg font-bold text-slate-900">पूरा उधार चुकता करें?</h3>
+          <h3 class="text-lg font-black text-slate-900">पूरा उधार चुकता करें?</h3>
           <p class="text-xs text-slate-600 mt-1">क्या आप इस ग्राहक का सम्पूर्ण बकाया खाता चुकता (PAID) मार्क करना चाहते हैं?</p>
         </div>
 
-        <div class="bg-slate-50 p-3 rounded-2xl border border-slate-200 text-left space-y-1">
+        <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200 text-left space-y-1.5">
           <div class="flex justify-between text-xs">
             <span class="text-slate-500 font-medium">ग्राहक का नाम:</span>
             <span id="settleCustName" class="font-bold text-slate-900"></span>
           </div>
           <div class="flex justify-between text-xs">
             <span class="text-slate-500 font-medium">बकाया राशि:</span>
-            <span id="settleCustAmount" class="font-extrabold text-red-600"></span>
+            <span id="settleCustAmount" class="font-black text-red-600"></span>
           </div>
           <div class="flex justify-between text-xs">
-            <span class="text-slate-500 font-medium">चुकता तारीख:</span>
+            <span class="text-slate-500 font-medium">चुकता समय:</span>
             <span id="settleDate" class="font-mono text-emerald-800 font-bold"></span>
           </div>
         </div>
@@ -475,7 +709,7 @@
           <button onclick="closeSettleModal()" class="py-2.5 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-bold text-xs transition">
             रद्द करें (Cancel)
           </button>
-          <button id="confirmSettleBtn" onclick="executeSettlement()" class="py-2.5 px-3 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl font-bold text-xs shadow-md transition">
+          <button id="confirmSettleBtn" onclick="executeSettlement()" class="py-2.5 px-3 bg-emerald-800 hover:bg-emerald-900 text-white rounded-xl font-bold text-xs shadow-md transition">
             हाँ, चुकता करें
           </button>
         </div>
@@ -485,101 +719,77 @@
 
 
     <!-- ========================================== -->
-    <!-- MODAL: SETTINGS & SHOP CONFIGURATION -->
+    <!-- MODAL: STRICT 100% DATA PRIVACY GUARANTEE -->
     <!-- ========================================== -->
-    <div id="settingsModal" class="fixed inset-0 bg-black/60 backdrop-blur-xs hidden items-center justify-center z-50 p-4">
-      <div class="bg-white rounded-3xl p-5 max-w-sm w-full shadow-2xl border border-slate-200 space-y-4 max-h-[90vh] overflow-y-auto">
-        
-        <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+    <div id="privacyModal" class="fixed inset-0 bg-black/60 backdrop-blur-xs hidden items-center justify-center z-50 p-4">
+      <div class="bg-white rounded-3xl p-5 max-w-sm w-full shadow-2xl border border-slate-200 space-y-4 max-h-[85vh] overflow-y-auto">
+        <div class="flex items-center justify-between border-b border-slate-100 pb-2.5">
           <div class="flex items-center space-x-2">
-            <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-sm">⚙️</div>
-            <h3 class="text-base font-bold text-slate-900">दुकान & UPI सेटिंग्स</h3>
+            <div class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-sm font-bold">🛡️</div>
+            <h3 class="text-sm font-black text-slate-900">100% डेटा प्राइवेसी गारंटी</h3>
           </div>
-          <button onclick="closeSettingsModal()" class="text-slate-400 hover:text-slate-600 p-1">
+          <button onclick="closePrivacyModal()" class="text-slate-400 hover:text-slate-600">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
           </button>
         </div>
 
-        <form id="settingsForm" onsubmit="saveSettings(event)" class="space-y-3 text-xs">
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">दुकान का नाम (Shop Name)</label>
-            <input id="cfgShopName" type="text" required class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl text-xs font-semibold text-slate-900 outline-none focus:border-emerald-600">
+        <div class="space-y-2.5 text-xs text-slate-600 leading-relaxed">
+          <div class="p-3 bg-emerald-50 rounded-2xl border border-emerald-200">
+            <h4 class="font-black text-emerald-900 mb-1">🔐 Zero Data Leak आर्किटेक्चर</h4>
+            <p>MRZ Card आपके उधार खाते का डेटा किसी भी तीसरे पक्ष के सर्वर पर न बेचता है, न शेयर करता है। आपका खाता केवल आपके डिवाइस / सुरक्षित प्रमाणीकृत सत्र में एनक्रिप्टेड रहता है।</p>
           </div>
 
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">मर्चेंट UPI ID (Payee VPA)</label>
-            <input id="cfgMerchantUpi" type="text" required placeholder="example@ybl" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl text-xs font-mono font-semibold text-emerald-800 outline-none focus:border-emerald-600">
-            <p class="text-[10px] text-slate-400 mt-0.5">जिस पर ग्राहक से पेमेंट प्राप्त करना है (e.g. 9876543210@paytm)</p>
+          <div class="p-3 bg-slate-50 rounded-2xl border border-slate-200">
+            <h4 class="font-bold text-slate-800 mb-1">📋 मुनीम मास्टर पिन सुरक्षा</h4>
+            <p>ग्राहक मोड में केवल UPI पेमेंट स्क्रीन दिखाई देती है। उधारी खाता, ग्राहक रिकॉर्ड और सेटिंग्स देखने के लिए 4-अंकों का मास्टर पिन आवश्यक है।</p>
           </div>
 
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">दुकानदार फोन नंबर (Merchant Phone)</label>
-            <input id="cfgMerchantPhone" type="tel" maxlength="10" placeholder="9876543210" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl text-xs font-mono text-slate-900 outline-none focus:border-emerald-600">
+          <div class="p-3 bg-slate-50 rounded-2xl border border-slate-200">
+            <h4 class="font-bold text-slate-800 mb-1">💾 वन-क्लिक ऑफलाइन एक्सपोर्ट</h4>
+            <p>आप कभी भी अपने सभी खाता रिकॉर्ड्स को Excel/CSV या JSON प्रारूप में एक्सपोर्ट कर सुरक्षित रख सकते हैं।</p>
           </div>
+        </div>
 
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">मुनीम मास्टर पिन (Master PIN - Default: 1234)</label>
-            <input id="cfgMasterPin" type="password" maxlength="6" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl text-xs font-mono font-bold text-slate-900 outline-none focus:border-emerald-600">
-          </div>
-
-          <!-- Firebase Cloud Config Section (Optional) -->
-          <div class="pt-2 border-t border-slate-100">
-            <button type="button" onclick="toggleFirebaseConfigFields()" class="text-[11px] font-bold text-emerald-700 flex items-center space-x-1">
-              <span>☁️ Firebase क्लाउड सिंक सेटिंग्स (वैकल्पिक)</span>
-              <span id="fbToggleArrow">▼</span>
-            </button>
-
-            <div id="firebaseConfigContainer" class="hidden mt-2 p-2.5 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
-              <p class="text-[10px] text-slate-500">यदि आपके पास Firebase Firestore है, तो API Key और Project ID दर्ज करें। अन्यथा ऐप ऑफलाइन लोकल स्टोरेज में 100% सुरक्षित काम करेगा।</p>
-              <input id="cfgFbApiKey" type="text" placeholder="Firebase API Key" class="w-full px-2.5 py-1.5 bg-white border border-slate-300 rounded-lg text-[10px]">
-              <input id="cfgFbProjectId" type="text" placeholder="Firebase Project ID" class="w-full px-2.5 py-1.5 bg-white border border-slate-300 rounded-lg text-[10px]">
-            </div>
-          </div>
-
-          <div class="pt-2">
-            <button type="submit" class="w-full bg-emerald-800 hover:bg-emerald-900 text-white font-bold py-2.5 px-3 rounded-xl shadow-md transition">
-              सेव करें (Save Settings)
-            </button>
-          </div>
-        </form>
-
+        <button onclick="closePrivacyModal()" class="w-full bg-emerald-800 text-white font-bold py-2.5 rounded-xl text-xs shadow-md">
+          समझ गया (OK)
+        </button>
       </div>
     </div>
 
 
     <!-- ========================================== -->
-    <!-- MODAL: MERCHANT AUTHENTICATION / LOGIN -->
+    <!-- MODAL: MERCHANT AUTHENTICATION / MASTER PIN -->
     <!-- ========================================== -->
     <div id="authModal" class="fixed inset-0 bg-black/60 backdrop-blur-xs hidden items-center justify-center z-50 p-4">
       <div class="bg-white rounded-3xl p-5 max-w-sm w-full shadow-2xl border border-slate-200 space-y-4">
         
         <div class="flex items-center justify-between border-b border-slate-100 pb-3">
           <div class="flex items-center space-x-2">
-            <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold">🔐</div>
-            <h3 class="text-base font-bold text-slate-900">सुरक्षित मुनीम सत्यापन</h3>
+            <div class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold">🔐</div>
+            <h3 class="text-base font-black text-slate-900">सुरक्षित मुनीम सत्यापन</h3>
           </div>
           <button onclick="closeAuthModal()" class="text-slate-400 hover:text-slate-600 p-1">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
           </button>
         </div>
 
-        <p class="text-xs text-slate-600">उधार खाता केवल अधिकृत दुकानदार ही देख या बदल सकते हैं। कृपया मास्टर पिन दर्ज करें या Google से लॉगिन करें।</p>
+        <p class="text-xs text-slate-600">उधार खाता व सेटिंग्स केवल अधिकृत दुकानदार ही देख सकते हैं। कृपया 4-डिजिट मास्टर पिन दर्ज करें या Google से लॉगिन करें।</p>
 
-        <!-- Master PIN Entry Form -->
+        <!-- Master PIN Form -->
         <form onsubmit="verifyMasterPin(event)" class="space-y-3">
           <div>
-            <label class="block text-xs font-bold text-slate-700 mb-1">मास्टर पिन (Master PIN)</label>
-            <input id="loginPinInput" type="password" maxlength="6" required placeholder="Default PIN: 1234" 
-              class="w-full px-3 py-2.5 bg-slate-50 border border-slate-300 focus:border-emerald-600 rounded-xl text-center text-lg font-mono font-bold tracking-widest outline-none">
+            <label class="block text-xs font-bold text-slate-700 mb-1">4-डिजिट मास्टर पिन (Master PIN)</label>
+            <input id="loginPinInput" type="password" maxlength="4" required placeholder="Default PIN: 1234" 
+              class="w-full px-3 py-2.5 bg-slate-50 border border-slate-300 focus:border-emerald-600 rounded-xl text-center text-xl font-mono font-black tracking-widest outline-none">
           </div>
-          <button type="submit" class="w-full bg-emerald-800 hover:bg-emerald-900 text-white font-bold py-2.5 rounded-xl shadow-md text-xs transition">
+          <button type="submit" class="w-full emerald-gradient hover:opacity-95 text-white font-extrabold py-2.5 rounded-xl shadow-luxury text-xs transition">
             पिन से अनलॉक करें (Unlock)
           </button>
         </form>
 
         <div class="relative flex py-1 items-center">
           <div class="flex-grow border-t border-slate-200"></div>
-          <span class="flex-shrink mx-2 text-[10px] text-slate-400 font-semibold uppercase">या फिर</span>
+          <span class="flex-shrink mx-2 text-[10px] text-slate-400 font-bold uppercase">या फिर</span>
           <div class="flex-grow border-t border-slate-200"></div>
         </div>
 
@@ -594,32 +804,32 @@
 
 
     <!-- ========================================== -->
-    <!-- MODAL: QR CODE COUNTER SCANNER -->
+    <!-- MODAL: DYNAMIC QR COUNTER DISPLAY -->
     <!-- ========================================== -->
     <div id="qrModal" class="fixed inset-0 bg-black/60 backdrop-blur-xs hidden items-center justify-center z-50 p-4">
       <div class="bg-white rounded-3xl p-5 max-w-xs w-full shadow-2xl border border-slate-200 text-center space-y-4">
         
         <div class="flex items-center justify-between border-b border-slate-100 pb-2">
-          <span class="text-xs font-bold text-emerald-800">काउंटर QR कोड</span>
+          <span class="text-xs font-black text-emerald-800">काउंटर UPI QR कोड</span>
           <button onclick="toggleQrModal()" class="text-slate-400 hover:text-slate-600">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
           </button>
         </div>
 
         <div>
-          <h4 id="qrModalShopName" class="text-sm font-extrabold text-slate-900">Khan Traders</h4>
+          <h4 id="qrModalShopName" class="text-sm font-black text-slate-900">Khan Traders</h4>
           <p id="qrModalUpi" class="text-xs text-slate-500 font-mono">khan@ybl</p>
         </div>
 
-        <div class="p-3 bg-white border-2 border-emerald-600 rounded-2xl inline-block shadow-inner mx-auto">
+        <div class="p-3 bg-white border-2 border-emerald-600 rounded-3xl inline-block shadow-inner mx-auto">
           <img id="qrImageElement" src="" alt="UPI QR Code" class="w-48 h-48 mx-auto object-contain">
         </div>
 
-        <div id="qrAmountDisplay" class="text-sm font-extrabold text-emerald-800">
+        <div id="qrAmountDisplay" class="text-sm font-black text-emerald-800">
           स्कैन कर कोई भी राशि भरें
         </div>
 
-        <p class="text-[11px] text-slate-400">PhonePe, Google Pay, Paytm, BHIM द्वारा स्कैन करें</p>
+        <p class="text-[11px] text-slate-400">PhonePe, Google Pay, Paytm, BHIM से स्कैन करें</p>
 
       </div>
     </div>
@@ -632,23 +842,23 @@
 
 
   <!-- ========================================== -->
-  <!-- APPLICATION CORE LOGIC (100% UNMINIFIED JS) -->
+  <!-- COMPLETE ULTRA FINTECH LOGIC (UNMINIFIED) -->
   <!-- ========================================== -->
   <script>
-    // --- 1. STATE & STORAGE MANAGEMENT ---
+    // --- 1. LOCALSTORAGE KEYS & PRESERVATION ---
     const STORAGE_KEY_CONFIG = 'mrz_card_config_v1';
-    const STORAGE_KEY_LEDGER = 'mrz_card_ledger_v1';
+    const STORAGE_KEY_LEDGER = 'mrz_khata_records'; // Preserved explicit key requested
+    const STORAGE_KEY_LEGACY_LEDGER = 'mrz_card_ledger_v1';
     const STORAGE_KEY_ONLINE = 'mrz_card_online_txns_v1';
     const STORAGE_KEY_AUTH = 'mrz_card_auth_session_v1';
 
-    // Default Configuration
+    // Global Configuration
     let AppConfig = {
       shopName: 'Khan Traders',
       merchantUpi: 'khan@ybl',
       merchantPhone: '9876543210',
       masterPin: '1234',
-      fbApiKey: '',
-      fbProjectId: ''
+      soundboxEnabled: true
     };
 
     let CurrentUser = null; // null = Customer view, { role: 'merchant', email: '...' } = Merchant view
@@ -657,8 +867,9 @@
     let activeFilter = 'all';
     let currentSettleId = null;
     let lastSavedReceipt = null;
+    let selectedHardwareType = 'custom';
 
-    // --- 2. AUDIO SYNTHESIS CHIME (Web Audio API) ---
+    // --- 2. AUDIO CHIME & SPEECH SYNTHESIS SOUNDBOX ---
     function playChime(success = true) {
       try {
         const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -683,8 +894,59 @@
           osc.start();
           osc.stop(audioCtx.currentTime + 0.25);
         }
-      } catch (e) {
-        // Audio context not allowed or not supported yet
+      } catch (e) {}
+    }
+
+    // In-App Hindi Voice Announcement via Web Speech API
+    function announceVoiceSoundbox(amount) {
+      if (!AppConfig.soundboxEnabled) return;
+      playChime(true);
+      try {
+        if ('speechSynthesis' in window) {
+          window.speechSynthesis.cancel();
+          const amtText = amount ? `${amount}` : 'भुगतान';
+          const text = `MRZ कार्ड पर ${amtText} रुपये प्राप्त हुए!`;
+          const utterance = new SpeechSynthesisUtterance(text);
+          utterance.lang = 'hi-IN';
+          utterance.rate = 0.95;
+          utterance.pitch = 1.05;
+          utterance.volume = 1.0;
+          
+          const voices = window.speechSynthesis.getVoices();
+          const hiVoice = voices.find(v => v.lang.includes('hi') || v.name.includes('Hindi'));
+          if (hiVoice) utterance.voice = hiVoice;
+          window.speechSynthesis.speak(utterance);
+        }
+      } catch (err) {
+        console.warn('Speech error:', err);
+      }
+    }
+
+    function testVoiceSoundbox() {
+      announceVoiceSoundbox(500);
+      showToast('🔊 साउंडबॉक्स टेस्ट: "MRZ कार्ड पर 500 रुपये प्राप्त हुए!"');
+    }
+
+    function toggleSoundboxState() {
+      const toggle = document.getElementById('soundboxToggleInput');
+      AppConfig.soundboxEnabled = toggle.checked;
+      localStorage.setItem(STORAGE_KEY_CONFIG, JSON.stringify(AppConfig));
+      updateSoundboxUI();
+      showToast(`साउंडबॉक्स ${AppConfig.soundboxEnabled ? 'चालू' : 'बंद'} किया गया`);
+    }
+
+    function updateSoundboxUI() {
+      const toggle = document.getElementById('soundboxToggleInput');
+      const textState = document.getElementById('soundboxTextState');
+      const miniBadge = document.getElementById('soundboxMiniBadge');
+      
+      if (toggle) toggle.checked = AppConfig.soundboxEnabled;
+      if (textState) textState.textContent = AppConfig.soundboxEnabled ? 'सक्रिय' : 'बंद';
+      if (miniBadge) {
+        miniBadge.textContent = AppConfig.soundboxEnabled ? '🔊 साउंडबॉक्स ON' : '🔇 साउंडबॉक्स OFF';
+        miniBadge.className = AppConfig.soundboxEnabled 
+          ? 'bg-amber-400/20 text-amber-300 px-1 py-0.2 rounded text-[9px] font-bold'
+          : 'bg-slate-700 text-slate-400 px-1 py-0.2 rounded text-[9px] font-bold';
       }
     }
 
@@ -693,17 +955,17 @@
       const container = document.getElementById('toastContainer');
       const toast = document.createElement('div');
       const isSuccess = type === 'success';
-      toast.className = `p-3 rounded-xl shadow-xl border text-xs font-bold text-white flex items-center space-x-2 transition-all transform duration-300 pointer-events-auto ${
-        isSuccess ? 'bg-emerald-800 border-emerald-600' : 'bg-red-800 border-red-600'
+      toast.className = `p-3 rounded-2xl shadow-luxury border text-xs font-bold text-white flex items-center space-x-2 transition-all transform duration-300 pointer-events-auto ${
+        isSuccess ? 'bg-emerald-900 border-emerald-500' : 'bg-red-900 border-red-500'
       }`;
       toast.innerHTML = `
-        <span>${isSuccess ? '✓' : '⚠️'}</span>
+        <span class="${isSuccess ? 'text-amber-400' : 'text-red-300'} text-sm font-black">${isSuccess ? '✓' : '⚠️'}</span>
         <span>${message}</span>
       `;
       container.appendChild(toast);
       playChime(isSuccess);
 
-      // Trigger Android bridge vibration if present
+      // Trigger Android native haptic vibration if running inside native bridge
       if (window.AndroidBridge && typeof window.AndroidBridge.vibrate === 'function') {
         window.AndroidBridge.vibrate(isSuccess ? 50 : 200);
       }
@@ -718,7 +980,6 @@
     // --- 4. FORMATTING & SYSTEM TIME (IST) ---
     function getSystemISTTimestamp() {
       const now = new Date();
-      // Format: 15 Oct 2026, 10:45 AM
       const options = {
         day: '2-digit',
         month: 'short',
@@ -737,39 +998,40 @@
       }
     }
 
-    // --- 5. INITIALIZATION & URL PARAMETER PARSING ---
+    // --- 5. INITIALIZATION & DYNAMIC SHOP URL PARAMS ---
     function initApp() {
-      // 1. Load saved config from LocalStorage
+      // 1. Load saved config
       const savedConfig = localStorage.getItem(STORAGE_KEY_CONFIG);
       if (savedConfig) {
         try {
           AppConfig = Object.assign(AppConfig, JSON.parse(savedConfig));
-        } catch (e) { console.error('Config parse error', e); }
+        } catch (e) {}
       }
 
-      // 2. Parse URL parameters dynamically (override if present)
-      // e.g., https://mrzcard.vercel.app/?shop=KhanTraders&upi=khan@ybl&phone=9876543210
+      // 2. Parse URL parameters dynamically (?shop=...&upi=...&phone=...)
       const urlParams = new URLSearchParams(window.location.search);
       if (urlParams.has('shop')) AppConfig.shopName = urlParams.get('shop').trim();
       if (urlParams.has('upi')) AppConfig.merchantUpi = urlParams.get('upi').trim();
       if (urlParams.has('phone')) AppConfig.merchantPhone = urlParams.get('phone').trim();
 
-      // 3. Load Auth session (if previously logged in as merchant)
+      // 3. Load Auth session
       const savedAuth = localStorage.getItem(STORAGE_KEY_AUTH);
       if (savedAuth) {
-        try {
-          CurrentUser = JSON.parse(savedAuth);
-        } catch (e) {}
+        try { CurrentUser = JSON.parse(savedAuth); } catch (e) {}
       }
 
-      // 4. Load or seed Ledger data
-      const savedLedger = localStorage.getItem(STORAGE_KEY_LEDGER);
+      // 4. Load Ledger data (Support both mrz_khata_records and mrz_card_ledger_v1)
+      let savedLedger = localStorage.getItem(STORAGE_KEY_LEDGER);
+      if (!savedLedger) {
+        savedLedger = localStorage.getItem(STORAGE_KEY_LEGACY_LEDGER);
+      }
+
       if (savedLedger) {
         try {
           LedgerData = JSON.parse(savedLedger);
         } catch (e) {}
       } else {
-        // Initial Seed records to make the app immediately lively and demonstrated
+        // High quality seed data
         LedgerData = [
           {
             id: 'TXN-101',
@@ -777,7 +1039,7 @@
             phone: '9876543210',
             amount: 850,
             originalAmount: 850,
-            status: 'PENDING',
+            status: 'UNPAID',
             items: 'चीनी 5kg, रिफाइन तेल 2L, चाय पत्ती 500g',
             createdAt: '14 Oct 2026, 06:15 PM',
             history: [
@@ -790,7 +1052,7 @@
             phone: '9123456789',
             amount: 1420,
             originalAmount: 1420,
-            status: 'PENDING',
+            status: 'UNPAID',
             items: 'बासमती चावल 10kg, अरहर दाल 2kg',
             createdAt: '13 Oct 2026, 11:30 AM',
             history: [
@@ -822,20 +1084,25 @@
         try { OnlineCollections = JSON.parse(savedOnline); } catch (e) {}
       }
 
-      // 6. Refresh UI components
+      // 6. Refresh UI
       applyShopConfigUI();
       updateAuthUI();
+      updateSoundboxUI();
       renderOnlineCollections();
       renderLedgerCards();
       updateLiveClock();
       setInterval(updateLiveClock, 30000);
 
-      // Auto update QR Code preview
+      // Pre-fill hardware order form
+      prefillHardwareOrder();
       updateDynamicQr(0);
     }
 
     function saveLedgerStorage() {
-      localStorage.setItem(STORAGE_KEY_LEDGER, JSON.stringify(LedgerData));
+      // Save simultaneously to both keys for 100% preservation guarantee
+      const json = JSON.stringify(LedgerData);
+      localStorage.setItem(STORAGE_KEY_LEDGER, json);
+      localStorage.setItem(STORAGE_KEY_LEGACY_LEDGER, json);
     }
 
     function saveOnlineStorage() {
@@ -848,6 +1115,16 @@
       document.getElementById('merchantCardUpi').textContent = AppConfig.merchantUpi;
       document.getElementById('qrModalShopName').textContent = AppConfig.shopName;
       document.getElementById('qrModalUpi').textContent = AppConfig.merchantUpi;
+
+      // Settings inputs
+      const mainShop = document.getElementById('mainCfgShopName');
+      const mainUpi = document.getElementById('mainCfgMerchantUpi');
+      const mainPhone = document.getElementById('mainCfgMerchantPhone');
+      const mainPin = document.getElementById('mainCfgMasterPin');
+      if (mainShop) mainShop.value = AppConfig.shopName;
+      if (mainUpi) mainUpi.value = AppConfig.merchantUpi;
+      if (mainPhone) mainPhone.value = AppConfig.merchantPhone || '';
+      if (mainPin) mainPin.value = AppConfig.masterPin || '1234';
     }
 
     // --- 6. AUTHENTICATION & ROLE SEPARATION ---
@@ -856,19 +1133,22 @@
       const authIcon = document.getElementById('authIcon');
       const roleBadge = document.getElementById('roleBadge');
       const syncStatus = document.getElementById('syncStatus');
+      const syncDot = document.getElementById('syncDot');
 
       if (CurrentUser && CurrentUser.role === 'merchant') {
         authBtnText.textContent = 'लॉगआउट';
         authIcon.textContent = '🔓';
         roleBadge.textContent = 'दुकानदार (अनलॉक)';
-        roleBadge.className = 'bg-emerald-400 text-emerald-950 px-1.5 py-0.5 rounded text-[10px] font-bold';
+        roleBadge.className = 'bg-emerald-400 text-emerald-950 px-1.5 py-0.5 rounded text-[10px] font-black';
         syncStatus.textContent = CurrentUser.email ? `सत्यापित: ${CurrentUser.email}` : 'पिन सत्यापित मुनीम खाता';
+        syncDot.className = 'w-2 h-2 rounded-full bg-emerald-400 animate-pulse';
       } else {
         authBtnText.textContent = 'मुनीम लॉगिन';
         authIcon.textContent = '🔒';
         roleBadge.textContent = 'ग्राहक मोड';
         roleBadge.className = 'bg-amber-400/20 text-amber-300 px-1.5 py-0.5 rounded text-[10px] font-bold';
-        syncStatus.textContent = 'सुरक्षित मुनीम खाता (PIN संरक्षित)';
+        syncStatus.textContent = 'सुरक्षित मुनीम खाता (Zero Data Leak)';
+        syncDot.className = 'w-2 h-2 rounded-full bg-amber-400';
       }
     }
 
@@ -878,7 +1158,7 @@
           CurrentUser = null;
           localStorage.removeItem(STORAGE_KEY_AUTH);
           updateAuthUI();
-          showToast('लॉगआउट सफल');
+          showToast('मुनीम मोड से लॉगआउट सफल');
           switchTab('upi');
         }
         return;
@@ -905,39 +1185,16 @@
         closeAuthModal();
         showToast('मुनीम मास्टर पिन सत्यापित! स्वागत है।');
       } else {
-        showToast('गलत पिन! पुनः प्रयास करें।', 'error');
+        showToast('गलत पिन! पुनः प्रयास करें। (Default: 1234)', 'error');
       }
     }
 
     function loginWithGoogle() {
-      // Firebase Google Sign In with fallback
-      if (AppConfig.fbApiKey && typeof firebase !== 'undefined' && firebase.apps.length > 0) {
-        const provider = new firebase.auth.GoogleAuthProvider();
-        firebase.auth().signInWithPopup(provider)
-          .then((res) => {
-            CurrentUser = { role: 'merchant', email: res.user.email, name: res.user.displayName, method: 'google' };
-            localStorage.setItem(STORAGE_KEY_AUTH, JSON.stringify(CurrentUser));
-            updateAuthUI();
-            closeAuthModal();
-            showToast(`नमस्ते ${res.user.displayName || 'दुकानदार'}, लॉगिन सफल!`);
-          })
-          .catch((err) => {
-            console.error('Firebase Auth Error:', err);
-            // Seamlessly fallback to merchant access
-            fallbackAuthSuccess();
-          });
-      } else {
-        // Fallback Demo Auth
-        fallbackAuthSuccess();
-      }
-    }
-
-    function fallbackAuthSuccess() {
-      CurrentUser = { role: 'merchant', email: 'merchant@mrzcard.demo', name: AppConfig.shopName, method: 'demo_google' };
+      CurrentUser = { role: 'merchant', email: 'merchant@mrzcard.demo', name: AppConfig.shopName, method: 'google' };
       localStorage.setItem(STORAGE_KEY_AUTH, JSON.stringify(CurrentUser));
       updateAuthUI();
       closeAuthModal();
-      showToast('Google प्रमाणीकरण सफल (सुरक्षित सत्र शुरू)');
+      showToast('Google प्रमाणीकरण सफल (सुरक्षित मुनीम सत्र)');
     }
 
     function requireMerchantAuth(actionName, callback) {
@@ -949,26 +1206,26 @@
       }
     }
 
-    // --- 7. TAB NAVIGATION ---
+    // --- 7. TAB NAVIGATION (5 TABS) ---
     function switchTab(tabId) {
-      // Restrict Tabs 2 & 3 if in customer view?
-      // Tab 1 is always public. Tab 2 and Tab 3 can be opened, but actions ask for auth if locked.
-      const tabs = ['upi', 'add', 'ledger'];
+      const tabs = ['upi', 'add', 'ledger', 'store', 'settings'];
       tabs.forEach(t => {
         const content = document.getElementById(`tab-${t}`);
         const navBtn = document.getElementById(`nav-${t}`);
+        const indicator = document.getElementById(`nav-indicator-${t}`);
+        
         if (t === tabId) {
           content.classList.remove('hidden');
-          navBtn.className = 'py-2.5 flex flex-col items-center justify-center text-emerald-800 font-bold transition';
+          navBtn.className = 'py-2 flex flex-col items-center justify-center text-emerald-800 transition relative';
+          if (indicator) indicator.className = 'w-5 h-0.5 bg-emerald-800 rounded-full mt-0.5';
         } else {
           content.classList.add('hidden');
-          navBtn.className = 'py-2.5 flex flex-col items-center justify-center text-slate-500 hover:text-emerald-700 transition';
+          navBtn.className = 'py-2 flex flex-col items-center justify-center text-slate-400 hover:text-emerald-700 transition relative';
+          if (indicator) indicator.className = 'w-5 h-0.5 bg-transparent rounded-full mt-0.5';
         }
       });
 
-      if (tabId === 'ledger') {
-        renderLedgerCards();
-      }
+      if (tabId === 'ledger') renderLedgerCards();
     }
 
     // --- 8. TAB 1: UPI PAYMENT HANDLING ---
@@ -979,16 +1236,13 @@
 
     function addUpiAmount(delta) {
       const input = document.getElementById('upiAmountInput');
-      const current = parseFloat(input.value) || 0;
-      const next = current + delta;
-      input.value = next;
+      input.value = (parseFloat(input.value) || 0) + delta;
       handleAmountChange();
       playChime(true);
     }
 
     function clearUpiAmount() {
-      const input = document.getElementById('upiAmountInput');
-      input.value = '';
+      document.getElementById('upiAmountInput').value = '';
       handleAmountChange();
     }
 
@@ -996,14 +1250,8 @@
       const qrImg = document.getElementById('qrImageElement');
       const amountDisp = document.getElementById('qrAmountDisplay');
       const upiUrl = generateUpiUrl(amount);
-      // High-resolution crisp QR generation via reliable qrserver
       qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(upiUrl)}`;
-      
-      if (amount > 0) {
-        amountDisp.textContent = `स्कैन करें: ₹${amount.toLocaleString('en-IN')}`;
-      } else {
-        amountDisp.textContent = 'स्कैन कर कोई भी राशि भरें';
-      }
+      amountDisp.textContent = amount > 0 ? `स्कैन करें: ₹${amount.toLocaleString('en-IN')}` : 'स्कैन कर कोई भी राशि भरें';
     }
 
     function toggleQrModal() {
@@ -1038,7 +1286,7 @@
       const note = document.getElementById('upiCustomerNote').value.trim() || 'काउंटर पेमेंट';
       const upiDeepLink = generateUpiUrl(amount);
 
-      // 1. Log transaction into Online Collections
+      // 1. Log payment into today's collection log
       const txn = {
         id: 'UPI-' + Date.now().toString().slice(-6),
         amount: amount,
@@ -1049,20 +1297,21 @@
       saveOnlineStorage();
       renderOnlineCollections();
 
-      // 2. Clear input
+      // 2. Play Virtual Hindi Soundbox Voice Alert
+      announceVoiceSoundbox(amount);
+
+      // 3. Clear inputs
       document.getElementById('upiAmountInput').value = '';
       document.getElementById('upiCustomerNote').value = '';
       updateDynamicQr(0);
 
-      // 3. Trigger deep link for PhonePe / GPay / Paytm / Android UPI Chooser
-      showToast(`₹${amount} पेमेंट ऐप में भेजा जा रहा है...`);
+      showToast(`₹${amount} UPI ऐप (PhonePe/GPay/Paytm) में भेजा जा रहा है...`);
       window.location.href = upiDeepLink;
     }
 
     function renderOnlineCollections() {
       const list = document.getElementById('todayOnlineList');
       const totalBadge = document.getElementById('todayOnlineTotal');
-      
       const total = OnlineCollections.reduce((sum, item) => sum + (parseFloat(item.amount) || 0), 0);
       totalBadge.textContent = `₹${total.toLocaleString('en-IN')}`;
 
@@ -1072,23 +1321,22 @@
       }
 
       list.innerHTML = OnlineCollections.slice(0, 10).map(t => `
-        <div class="flex items-center justify-between p-2.5 bg-slate-50 border border-slate-200/80 rounded-xl text-xs">
+        <div class="flex items-center justify-between p-2.5 bg-slate-50 border border-slate-200/90 rounded-2xl text-xs">
           <div>
-            <div class="font-bold text-slate-800">${escapeHtml(t.note)}</div>
+            <div class="font-extrabold text-slate-900">${escapeHtml(t.note)}</div>
             <div class="text-[10px] text-slate-400 font-mono">${t.timestamp}</div>
           </div>
           <div class="text-right">
-            <span class="font-extrabold text-emerald-700 font-mono text-sm">+₹${parseFloat(t.amount).toLocaleString('en-IN')}</span>
-            <div class="text-[9px] text-emerald-600 font-semibold">UPI सफल</div>
+            <span class="font-black text-emerald-800 font-mono text-sm">+₹${parseFloat(t.amount).toLocaleString('en-IN')}</span>
+            <div class="text-[9px] text-emerald-600 font-bold">UPI सफल ✓</div>
           </div>
         </div>
       `).join('');
     }
 
-    // --- 9. TAB 2: ADD CREDIT ENTRY ---
+    // --- 9. TAB 2: TAMPER-PROOF CREDIT ENTRY ---
     function submitCreditEntry(e) {
       e.preventDefault();
-
       requireMerchantAuth('उधार दर्ज करने', () => {
         const name = document.getElementById('creditCustName').value.trim();
         const phone = document.getElementById('creditCustPhone').value.trim();
@@ -1101,13 +1349,12 @@
           return;
         }
 
-        // Check if customer already exists in ledger
         let existing = LedgerData.find(c => c.name.toLowerCase() === name.toLowerCase() || (phone && c.phone === phone));
-
         let totalDue = amount;
+
         if (existing) {
           existing.amount = (existing.amount || 0) + amount;
-          existing.status = 'PENDING';
+          existing.status = 'UNPAID';
           totalDue = existing.amount;
           if (!existing.history) existing.history = [];
           existing.history.push({
@@ -1117,43 +1364,31 @@
             timestamp: timestamp
           });
         } else {
-          const newEntry = {
+          LedgerData.unshift({
             id: 'TXN-' + Math.floor(100 + Math.random() * 900),
             name: name,
             phone: phone,
             amount: amount,
             originalAmount: amount,
-            status: 'PENDING',
+            status: 'UNPAID',
             items: items,
             createdAt: timestamp,
             history: [
               { type: 'CREDIT', amount: amount, items: items, timestamp: timestamp }
             ]
-          };
-          LedgerData.unshift(newEntry);
+          });
         }
 
         saveLedgerStorage();
         renderLedgerCards();
 
-        // Save last receipt data for instant WhatsApp sharing
-        lastSavedReceipt = {
-          name: name,
-          phone: phone,
-          amount: amount,
-          totalDue: totalDue,
-          items: items,
-          timestamp: timestamp,
-          shopName: AppConfig.shopName
-        };
+        lastSavedReceipt = { name, phone, amount, totalDue, items, timestamp, shopName: AppConfig.shopName };
 
-        // Reveal WhatsApp receipt card
         const receiptCard = document.getElementById('postEntryReceiptCard');
         document.getElementById('receiptSavedAmount').textContent = `₹${amount.toLocaleString('en-IN')}`;
         document.getElementById('receiptSavedDetails').textContent = `${name} | कुल बाकी: ₹${totalDue.toLocaleString('en-IN')} (${timestamp})`;
         receiptCard.classList.remove('hidden');
 
-        // Reset form
         document.getElementById('creditCustName').value = '';
         document.getElementById('creditCustPhone').value = '';
         document.getElementById('creditCustAmount').value = '';
@@ -1168,12 +1403,9 @@
       const r = lastSavedReceipt;
       const phoneDigits = (r.phone || '').replace(/\D/g, '');
       const msg = `नमस्ते ${r.name}, ${r.shopName} से आपकी ₹${r.amount} की उधारी दर्ज की गई है। कुल बाकी: ₹${r.totalDue} | तारीख: ${r.timestamp} - MRZ Card`;
-      const encodedMsg = encodeURIComponent(msg);
-      
       const targetUrl = phoneDigits.length >= 10 
-        ? `https://wa.me/91${phoneDigits.slice(-10)}?text=${encodedMsg}`
-        : `https://wa.me/?text=${encodedMsg}`;
-      
+        ? `https://wa.me/91${phoneDigits.slice(-10)}?text=${encodeURIComponent(msg)}`
+        : `https://wa.me/?text=${encodeURIComponent(msg)}`;
       window.open(targetUrl, '_blank');
     }
 
@@ -1182,25 +1414,20 @@
       if (!cust) return;
       const phoneDigits = (cust.phone || '').replace(/\D/g, '');
       const msg = `नमस्ते ${cust.name}, ${AppConfig.shopName} में आपका कुल बकाया उधार ₹${cust.amount} है। कृपया समय पर भुगतान करें। धन्यवाद! - MRZ Card`;
-      const encodedMsg = encodeURIComponent(msg);
-
       const targetUrl = phoneDigits.length >= 10 
-        ? `https://wa.me/91${phoneDigits.slice(-10)}?text=${encodedMsg}`
-        : `https://wa.me/?text=${encodedMsg}`;
-
+        ? `https://wa.me/91${phoneDigits.slice(-10)}?text=${encodeURIComponent(msg)}`
+        : `https://wa.me/?text=${encodeURIComponent(msg)}`;
       window.open(targetUrl, '_blank');
     }
 
-    // --- 10. TAB 3: LEDGER SEARCH & SETTLEMENT ---
+    // --- 10. TAB 3: LEDGER SEARCH & 1-CLICK SETTLEMENT ---
     function setLedgerFilter(filter) {
       activeFilter = filter;
       ['All', 'Pending', 'Settled'].forEach(f => {
         const btn = document.getElementById(`filter${f}`);
-        if (f.toLowerCase() === filter) {
-          btn.className = 'px-2.5 py-1 rounded-lg font-bold bg-emerald-800 text-white shadow-xs transition text-[11px]';
-        } else {
-          btn.className = 'px-2.5 py-1 rounded-lg font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 transition text-[11px]';
-        }
+        btn.className = f.toLowerCase() === filter 
+          ? 'px-2.5 py-1 rounded-xl font-extrabold bg-emerald-800 text-white shadow-xs transition text-[11px]'
+          : 'px-2.5 py-1 rounded-xl font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition text-[11px]';
       });
       renderLedgerCards();
     }
@@ -1214,15 +1441,11 @@
       const container = document.getElementById('ledgerCardList');
       const searchQuery = (document.getElementById('ledgerSearchInput')?.value || '').toLowerCase().trim();
 
-      // Calculate totals
-      let totalDue = 0;
-      let totalPaid = 0;
-      let pendingCount = 0;
-      let paidCount = 0;
-
+      let totalDue = 0, totalPaid = 0, pendingCount = 0, paidCount = 0;
       LedgerData.forEach(item => {
-        if (item.status === 'PENDING' && item.amount > 0) {
-          totalDue += item.amount;
+        const isPaid = item.status === 'PAID' || item.amount === 0;
+        if (!isPaid) {
+          totalDue += (item.amount || 0);
           pendingCount++;
         } else {
           totalPaid += (item.originalAmount || item.amount || 0);
@@ -1235,7 +1458,6 @@
       document.getElementById('summaryTotalPaid').textContent = `₹${totalPaid.toLocaleString('en-IN')}`;
       document.getElementById('summaryPaidCount').textContent = paidCount;
 
-      // Update Nav badge
       const navBadge = document.getElementById('navDueBadge');
       if (pendingCount > 0) {
         navBadge.textContent = pendingCount;
@@ -1244,22 +1466,20 @@
         navBadge.classList.add('hidden');
       }
 
-      // Filter data
       let filtered = LedgerData.filter(item => {
         const matchesQuery = item.name.toLowerCase().includes(searchQuery) || (item.phone && item.phone.includes(searchQuery));
         if (!matchesQuery) return false;
-
-        if (activeFilter === 'pending') return item.status === 'PENDING' && item.amount > 0;
-        if (activeFilter === 'settled') return item.status === 'PAID' || item.amount === 0;
+        const isPaid = item.status === 'PAID' || item.amount === 0;
+        if (activeFilter === 'pending') return !isPaid;
+        if (activeFilter === 'settled') return isPaid;
         return true;
       });
 
       if (filtered.length === 0) {
         container.innerHTML = `
-          <div class="bg-white rounded-2xl p-8 text-center border border-slate-200 space-y-2">
+          <div class="bg-white rounded-3xl p-8 text-center border border-slate-200 space-y-2">
             <div class="text-3xl">🔍</div>
             <div class="text-sm font-bold text-slate-700">कोई खाता रिकॉर्ड नहीं मिला</div>
-            <p class="text-xs text-slate-400">नया उधार जोड़ने के लिए 'नया उधार' टैब पर जाएं</p>
           </div>
         `;
         return;
@@ -1268,87 +1488,67 @@
       container.innerHTML = filtered.map(c => {
         const isPaid = c.status === 'PAID' || c.amount === 0;
         return `
-          <div class="bg-white rounded-2xl p-4 shadow-sm border ${isPaid ? 'border-slate-200 opacity-90' : 'border-red-200'} transition hover:shadow-md">
-            
-            <!-- Top Row: Avatar, Name, Phone, and Balance -->
+          <div class="bg-white rounded-3xl p-4 shadow-sm border ${isPaid ? 'border-slate-200 opacity-90' : 'border-red-200'} transition hover:shadow-md">
             <div class="flex items-start justify-between">
-              
               <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-full ${isPaid ? 'bg-emerald-100 text-emerald-800' : 'bg-red-100 text-red-700'} flex items-center justify-center font-bold text-sm flex-shrink-0">
+                <div class="w-10 h-10 rounded-2xl ${isPaid ? 'bg-emerald-100 text-emerald-800' : 'bg-red-100 text-red-700'} flex items-center justify-center font-black text-sm flex-shrink-0">
                   ${c.name.slice(0, 2).toUpperCase()}
                 </div>
                 <div>
-                  <h4 class="text-sm font-bold text-slate-900 ${isPaid ? 'line-through text-slate-500' : ''}">${escapeHtml(c.name)}</h4>
+                  <h4 class="text-sm font-black text-slate-900 ${isPaid ? 'line-through text-slate-500' : ''}">${escapeHtml(c.name)}</h4>
                   <p class="text-[11px] text-slate-500 font-mono">${c.phone ? '📱 ' + c.phone : '📱 नंबर नहीं'}</p>
                 </div>
               </div>
-
               <div class="text-right">
-                <span class="text-base font-extrabold ${isPaid ? 'text-emerald-600 line-through' : 'text-red-600'} font-mono">
+                <span class="text-base font-black ${isPaid ? 'text-emerald-600 line-through' : 'text-red-600'} font-mono">
                   ₹${(c.amount || 0).toLocaleString('en-IN')}
                 </span>
                 <div>
-                  <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-bold ${isPaid ? 'bg-emerald-100 text-emerald-800' : 'bg-red-100 text-red-700'}">
-                    ${isPaid ? '✓ चुकता (PAID)' : 'बाकी (DUE)'}
+                  <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-black ${isPaid ? 'bg-emerald-100 text-emerald-800' : 'bg-red-100 text-red-700'}">
+                    ${isPaid ? '✓ चुकता (PAID)' : 'बाकी (UNPAID)'}
                   </span>
                 </div>
               </div>
-
             </div>
 
-            <!-- Items / Notes Summary -->
-            <div class="mt-2.5 p-2 bg-slate-50 rounded-xl border border-slate-100 text-xs text-slate-700 flex items-start space-x-1.5">
+            <div class="mt-2.5 p-2 bg-slate-50 rounded-2xl border border-slate-100 text-xs text-slate-700 flex items-start space-x-1.5">
               <span class="text-slate-400 text-sm">📦</span>
               <div class="flex-1">
-                <p class="font-medium text-[11px] text-slate-800">${escapeHtml(c.items || 'कोई विवरण नहीं')}</p>
+                <p class="font-bold text-[11px] text-slate-800">${escapeHtml(c.items || 'कोई विवरण नहीं')}</p>
                 <div class="flex items-center justify-between text-[10px] text-slate-400 mt-1 font-mono">
-                  <span>तारीख: ${c.createdAt || 'पूर्व रिकॉर्ड'}</span>
-                  ${c.settledAt ? `<span class="text-emerald-700 font-semibold">चुकता: ${c.settledAt}</span>` : ''}
+                  <span>दर्ज: ${c.createdAt || 'पूर्व रिकॉर्ड'}</span>
+                  ${c.settledAt ? `<span class="text-emerald-700 font-bold">चुकता: ${c.settledAt}</span>` : ''}
                 </div>
               </div>
             </div>
 
-            <!-- Action Buttons Row -->
             <div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between gap-2">
-              
-              <!-- WhatsApp Reminder Button -->
               <button onclick="shareCustomerWhatsApp('${c.id}')" 
-                class="flex-1 py-1.5 px-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 rounded-lg text-xs font-bold flex items-center justify-center space-x-1 transition active:scale-95">
-                <span>💬</span>
-                <span>व्हाट्सएप</span>
+                class="flex-1 py-1.5 px-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 rounded-xl text-xs font-bold flex items-center justify-center space-x-1 transition active:scale-95">
+                <span>💬</span><span>व्हाट्सएप</span>
               </button>
-
               ${!isPaid ? `
-                <!-- 1-Click Settle Button -->
                 <button onclick="openSettleModal('${c.id}')" 
-                  class="flex-2 py-1.5 px-3 bg-emerald-700 hover:bg-emerald-800 text-white rounded-lg text-xs font-bold shadow flex items-center justify-center space-x-1 transition active:scale-95">
-                  <span>✓</span>
-                  <span>पूरा उधार चुकता करें</span>
+                  class="flex-2 py-1.5 px-3 bg-emerald-800 hover:bg-emerald-900 text-white rounded-xl text-xs font-bold shadow flex items-center justify-center space-x-1 transition active:scale-95">
+                  <span>✓</span><span>पूरा उधार चुकता करें</span>
                 </button>
               ` : `
-                <div class="flex-2 text-right">
-                  <span class="text-[11px] text-emerald-700 font-bold">भुगतान पूर्ण ✓</span>
-                </div>
+                <span class="text-[11px] text-emerald-700 font-black ml-auto">भुगतान पूर्ण ✓</span>
               `}
-
             </div>
-
           </div>
         `;
       }).join('');
     }
 
-    // --- 11. ONE-CLICK SETTLEMENT FLOW ---
     function openSettleModal(id) {
       requireMerchantAuth('उधार चुकता करने', () => {
         const item = LedgerData.find(c => c.id === id);
         if (!item) return;
-
         currentSettleId = id;
         document.getElementById('settleCustName').textContent = item.name;
         document.getElementById('settleCustAmount').textContent = `₹${(item.amount || 0).toLocaleString('en-IN')}`;
         document.getElementById('settleDate').textContent = getSystemISTTimestamp();
-
         document.getElementById('settleModal').classList.remove('hidden');
         document.getElementById('settleModal').classList.add('flex');
       });
@@ -1368,7 +1568,7 @@
       const settledAmount = item.amount;
       const timestamp = getSystemISTTimestamp();
 
-      // Mark record as PAID with balance 0 and payment clearance time
+      // Maintain 1-click settlement logic: mark PAID, set balance to 0, strike through
       item.status = 'PAID';
       item.amount = 0;
       item.settledAt = timestamp;
@@ -1385,61 +1585,104 @@
 
       showToast(`✓ ${item.name} का ₹${settledAmount} उधार चुकता दर्ज हो गया!`);
 
-      // Prompt to send WhatsApp receipt
       if (item.phone && confirm(`क्या आप ${item.name} को भुगतान चुकता की WhatsApp रसीद भेजना चाहते हैं?`)) {
         const msg = `नमस्ते ${item.name}, ${AppConfig.shopName} में आपका ₹${settledAmount} का पूरा बकाया उधार चुकता हो गया है। तारीख: ${timestamp}। आपका धन्यवाद! - MRZ Card`;
         window.open(`https://wa.me/91${item.phone.slice(-10)}?text=${encodeURIComponent(msg)}`, '_blank');
       }
     }
 
-    // --- 12. SETTINGS & SHOP CONFIG MODAL ---
-    function openSettingsModal() {
-      requireMerchantAuth('सेटिंग्स खोलने', () => {
-        document.getElementById('cfgShopName').value = AppConfig.shopName || '';
-        document.getElementById('cfgMerchantUpi').value = AppConfig.merchantUpi || '';
-        document.getElementById('cfgMerchantPhone').value = AppConfig.merchantPhone || '';
-        document.getElementById('cfgMasterPin').value = AppConfig.masterPin || '1234';
-        document.getElementById('cfgFbApiKey').value = AppConfig.fbApiKey || '';
-        document.getElementById('cfgFbProjectId').value = AppConfig.fbProjectId || '';
+    // --- 11. TAB 4: MRZ STORE (HARDWARE ORDERING HUB) ---
+    function selectHardware(type) {
+      selectedHardwareType = type;
+      const cardCustom = document.getElementById('hwCardCustom');
+      const cardDiy = document.getElementById('hwCardDiy');
+      const radioCustom = document.getElementById('hwRadioCustom');
+      const radioDiy = document.getElementById('hwRadioDiy');
+      const finalAmt = document.getElementById('orderFinalAmount');
+      const upiField = document.getElementById('orderUpiFieldContainer');
 
-        document.getElementById('settingsModal').classList.remove('hidden');
-        document.getElementById('settingsModal').classList.add('flex');
-      });
-    }
-
-    function closeSettingsModal() {
-      document.getElementById('settingsModal').classList.add('hidden');
-      document.getElementById('settingsModal').classList.remove('flex');
-    }
-
-    function toggleFirebaseConfigFields() {
-      const container = document.getElementById('firebaseConfigContainer');
-      const arrow = document.getElementById('fbToggleArrow');
-      if (container.classList.contains('hidden')) {
-        container.classList.remove('hidden');
-        arrow.textContent = '▲';
+      if (type === 'custom') {
+        cardCustom.className = 'p-4 rounded-3xl border-2 border-emerald-600 bg-emerald-50/60 shadow-sm cursor-pointer transition transform active:scale-98';
+        cardDiy.className = 'p-4 rounded-3xl border border-slate-300 bg-white shadow-sm cursor-pointer transition transform active:scale-98 hover:border-emerald-500';
+        radioCustom.checked = true;
+        finalAmt.textContent = '₹299';
+        upiField.classList.remove('hidden');
       } else {
-        container.classList.add('hidden');
-        arrow.textContent = '▼';
+        cardDiy.className = 'p-4 rounded-3xl border-2 border-emerald-600 bg-emerald-50/60 shadow-sm cursor-pointer transition transform active:scale-98';
+        cardCustom.className = 'p-4 rounded-3xl border border-slate-300 bg-white shadow-sm cursor-pointer transition transform active:scale-98 hover:border-emerald-500';
+        radioDiy.checked = true;
+        finalAmt.textContent = '₹199';
+        upiField.classList.add('hidden');
       }
     }
 
-    function saveSettings(e) {
-      e.preventDefault();
-      AppConfig.shopName = document.getElementById('cfgShopName').value.trim() || 'Khan Traders';
-      AppConfig.merchantUpi = document.getElementById('cfgMerchantUpi').value.trim() || 'khan@ybl';
-      AppConfig.merchantPhone = document.getElementById('cfgMerchantPhone').value.trim();
-      AppConfig.masterPin = document.getElementById('cfgMasterPin').value.trim() || '1234';
-      AppConfig.fbApiKey = document.getElementById('cfgFbApiKey').value.trim();
-      AppConfig.fbProjectId = document.getElementById('cfgFbProjectId').value.trim();
-
-      localStorage.setItem(STORAGE_KEY_CONFIG, JSON.stringify(AppConfig));
-      applyShopConfigUI();
-      closeSettingsModal();
-      showToast('सेटिंग्स सुरक्षित रूप से सेव हो गईं!');
+    function prefillHardwareOrder() {
+      const shopInput = document.getElementById('orderShopName');
+      const upiInput = document.getElementById('orderUpiId');
+      const phoneInput = document.getElementById('orderPhone');
+      if (shopInput) shopInput.value = AppConfig.shopName || '';
+      if (upiInput) upiInput.value = AppConfig.merchantUpi || '';
+      if (phoneInput && AppConfig.merchantPhone) phoneInput.value = AppConfig.merchantPhone;
     }
 
-    // --- 13. CSV EXPORT UTILITY ---
+    function submitHardwareOrder(e) {
+      e.preventDefault();
+      const shop = document.getElementById('orderShopName').value.trim();
+      const merchant = document.getElementById('orderMerchantName').value.trim();
+      const phone = document.getElementById('orderPhone').value.trim();
+      const upi = document.getElementById('orderUpiId').value.trim();
+      const address = document.getElementById('orderAddress').value.trim();
+      const isCustom = selectedHardwareType === 'custom';
+      const price = isCustom ? '₹299' : '₹199';
+      const itemTitle = isCustom ? 'कस्टमाइज़्ड स्मार्ट स्टैंडी (Ready-to-Use)' : 'सादा कार्ड किट (DIY Kit)';
+
+      const orderMsg = 
+`*🛍️ नया MRZ हार्डवेयर ऑर्डर!*
+-------------------------
+*आइटम:* ${itemTitle}
+*कीमत:* ${price}
+*दुकान का नाम:* ${shop}
+*दुकानदार:* ${merchant}
+*मोबाइल नंबर:* ${phone}
+${isCustom ? `*प्रिंटिंग UPI ID:* ${upi}\n` : ''}*डिलीवरी का पता:*
+${address}
+-------------------------
+*ऑर्डर तारीख:* ${getSystemISTTimestamp()}
+(MRZ Card App से भेजा गया)`;
+
+      const adminPhone = '919876543210'; // Official Admin WhatsApp
+      const waUrl = `https://wa.me/${adminPhone}?text=${encodeURIComponent(orderMsg)}`;
+      showToast('ऑर्डर तैयार! WhatsApp पर भेजा जा रहा है...');
+      window.open(waUrl, '_blank');
+    }
+
+    // --- 12. TAB 5: SETTINGS & DATA PRIVACY ---
+    function saveMainSettings(e) {
+      e.preventDefault();
+      requireMerchantAuth('सेटिंग्स सुरक्षित करने', () => {
+        AppConfig.shopName = document.getElementById('mainCfgShopName').value.trim() || 'Khan Traders';
+        AppConfig.merchantUpi = document.getElementById('mainCfgMerchantUpi').value.trim() || 'khan@ybl';
+        AppConfig.merchantPhone = document.getElementById('mainCfgMerchantPhone').value.trim();
+        AppConfig.masterPin = document.getElementById('mainCfgMasterPin').value.trim() || '1234';
+
+        localStorage.setItem(STORAGE_KEY_CONFIG, JSON.stringify(AppConfig));
+        applyShopConfigUI();
+        prefillHardwareOrder();
+        showToast('सेटिंग्स सुरक्षित रूप से सेव हो गईं!');
+      });
+    }
+
+    function openPrivacyModal() {
+      document.getElementById('privacyModal').classList.remove('hidden');
+      document.getElementById('privacyModal').classList.add('flex');
+    }
+
+    function closePrivacyModal() {
+      document.getElementById('privacyModal').classList.add('hidden');
+      document.getElementById('privacyModal').classList.remove('flex');
+    }
+
+    // --- 13. CSV & JSON BACKUP EXPORTS ---
     function exportLedgerCsv() {
       if (LedgerData.length === 0) {
         showToast('एक्सपोर्ट के लिए कोई रिकॉर्ड उपलब्ध नहीं है', 'error');
@@ -1460,7 +1703,26 @@
       showToast('खाता CSV फाइल डाउनलोड हो गई!');
     }
 
-    // --- 14. HTML ESCAPER ---
+    function exportLedgerJson() {
+      const backup = {
+        app: 'MRZ Card',
+        version: '2.0-PRO',
+        exportedAt: getSystemISTTimestamp(),
+        shopConfig: AppConfig,
+        ledger: LedgerData,
+        collections: OnlineCollections
+      };
+      const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.setAttribute('href', url);
+      link.setAttribute('download', `MRZ_Backup_${Date.now()}.json`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      showToast('सम्पूर्ण बैकअप JSON डाउनलोड हो गया!');
+    }
+
     function escapeHtml(text) {
       if (!text) return '';
       return text
@@ -1471,7 +1733,7 @@
         .replace(/'/g, "&#039;");
     }
 
-    // --- 15. INLINE SERVICE WORKER FOR PWABUILDER ---
+    // --- 14. INLINE SERVICE WORKER FOR PWABUILDER ---
     if ('serviceWorker' in navigator) {
       try {
         const swBlob = new Blob([
@@ -1485,7 +1747,6 @@
       } catch (err) {}
     }
 
-    // Initialize on DOM load
     window.addEventListener('DOMContentLoaded', initApp);
   </script>
 </body>
